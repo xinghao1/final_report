@@ -1,0 +1,83 @@
+\begin{landscape}
+\section{Estimation of Power consumption for each operation}
+\label{app:powerbudgets}
+\vspace{-12pt}
+\begin{table}[H]
+\centering
+\caption{Average Power Budget for each operation}
+\begin{tabular}{C{3.5cm}C{3.4cm}C{3.4cm}C{3.4cm}C{3.4cm}C{3.4cm}}
+\toprule
+\textbf{Subsystem}	&	\textbf{Inspection \& Maintenance}	&	\textbf{EVA Operations}	&	\textbf{Berthing of vehicles}	&	\textbf{Outpost Reconfiguration}	&	\textbf{Standby}\\\midrule
+\textbf{Locomotion}
+&	45	&	90	&	90	&	90	&	0	\\
+\textbf{Data Handling}
+&	8	&	8	&	8	&	8	&	8	\\
+\textbf{Thermal Control}
+&	140	&	140	&	140	&	140	&	140	\\
+\textbf{Power}
+&	0	&	0	&	0	&	0	&	0	\\
+\textbf{End Effector}
+&	20	&	20	&	40	&	40	&	0	\\
+\textbf{Sensors}
+&	60	&	45	&	45	&	45	&	45	\\
+\textbf{Frame}
+&	0	&	0	&	0	&	0	&	0	\\\hline
+\textbf{Total}
+&	273	&	303	&	323	&	323	&	193	\\\bottomrule
+\end{tabular}
+\end{table}
+\vspace{-12pt}
+\begin{table}[H]
+\centering
+\caption{Peak Power Budget for each operation}
+\begin{tabular}{C{3.5cm}C{3.4cm}C{3.4cm}C{3.4cm}C{3.4cm}C{3.4cm}}
+\toprule
+\textbf{Subsystem}	&	\textbf{Inspection \& Maintenance}	&	\textbf{EVA Operations}	&	\textbf{Berthing of vehicles}	&	\textbf{Outpost Reconfiguration}	&	\textbf{Standby}\\\midrule
+\textbf{Locomotion}
+&	70	&	140	&	140	&	140	&	0	\\
+\textbf{Data Handling}
+&	13	&	13	&	13	&	13	&	13	\\
+\textbf{Thermal Control}
+&	140	&	140	&	140	&	140	&	140	\\
+\textbf{Power}
+&	0	&	0	&	0	&	0	&	0	\\
+\textbf{End Effector}
+&	50	&	50	&	100	&	100	&	0	\\
+\textbf{Sensors}
+&	60	&	60	&	60	&	60	&	60	\\
+\textbf{Frame}
+&	0	&	0	&	0	&	0	&	0	\\\hline
+\textbf{Total}
+&	333	&	403	&	453	&	453	&	213	\\\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+The proportion of time the system will spend on each operation in its lifetime is estimated and a weighted average of the average consumption is derived in \Cref{tab:opfreq}.
+\begin{table}[H]
+\centering
+\caption{Weighted average power consumption}
+\begin{tabular}{cC{4cm}C{4cm}}
+\toprule
+\textbf{Operation}	&	\textbf{Proportion of time spent}	&	\textbf{Average Power Consumption (W)}\\\midrule
+\textbf{Inspection \& Maintenance}
+&	50\%&	273\\
+\textbf{EVA Operations}
+&	3\%	&	303\\
+\textbf{Berthing of vehicles}
+&	6\%	&	323\\
+\textbf{Outpost Reconfiguration}
+&	6\%	&	323\\
+\textbf{Standby}
+&	35\%&	193\\\hline
+\textbf{Weighted Average}
+&	-	&	251.9\\\bottomrule
+\end{tabular}
+\label{tab:opfreq}
+\end{table}
+
+\subsection*{Energy Consumption for a cycle}
+$$\begin{aligned}
+&\mbox{Energy consumption in a month}\\
+=&251.9 W \times 60 s/min\times 60min/hr \times 24hr/day \times 30days/month\\=&\num{6.53e+08} J\\=&653 MJ
+\end{aligned}$$

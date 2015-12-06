@@ -1,0 +1,189 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[headheight=15pt, margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{ctable}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[binary-units=true]{siunitx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hhline}
+\usepackage{tabulary}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage[framed]{mcode}
+%\usepackage{indentfirst}
+\usepackage{standalone}
+\usepackage{fancyhdr}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}@{\extracolsep{\fill}}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\lstset{breaklines}
+\usepackage[hyphens]{url}
+\usepackage{cleveref}
+\usepackage[acronym, nopostdot, nonumberlist]{glossaries}
+\setlength{\parindent}{0em}
+%\renewcommand{\baselinestretch}{1.3}
+\sisetup{detect-weight=true, detect-family=true}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{SRK}
+\rhead{Final Report}
+
+\makeglossaries
+\include{allacronym}
+
+%---------------------------------------------------------------------------------------------------------
+\begin{document}
+\include{cover_final}		%Cover page
+\cfoot{\normalsize\thepage}
+\pagenumbering{roman}% Roman-numbered pages (start from i)
+\onehalfspacing
+% Revision History
+\include{revisions}
+\newpage
+% Glossaries
+\printglossary[type=\acronymtype, title= List of Nomenclature]
+\printglossary[title=List of Symbols]
+\newpage
+% Executive Summary
+\include{final_summary}
+\newpage
+% Table of contents
+\tableofcontents
+\newpage
+% Lists of figures and tables
+\listoffigures
+\listoftables
+
+\clearpage
+\cfoot{\normalsize\thepage}
+\pagenumbering{arabic}% Arabic-numbered pages (start from 1)
+%---------------------------------------------------------------------------------------------------------
+\section{Overview}
+\label{sect:overview}
+
+%--------------Operation
+
+\newpage
+\section{Concept of Proposed System}
+\subsection{Background, Objectives, and Scope}
+\input{con_scope}		% Scope not done
+
+\subsection{Operational Policies and Constraints}
+\label{sect:policies}
+\input{con_policies}	% Done
+
+\subsection{Description of the Proposed System}
+\label{sect:prop_sys}
+\input{con_system}		% Need quality attributes
+
+\subsection{Modes of Operation}
+\input{con_modes}		% Done
+
+\subsection{User Classes and Other Involved Personnel}
+\input{con_users}		% Done
+\newpage
+\section{Mission Level Block Diagram}
+\label{sect:MLBD}
+\input{mlbd}			% need description
+\newpage
+\section{Operational Scenarios}
+\label{sect:FFBD}
+\input{ffbds}			% need description
+
+%--------------System
+\begin{landscape}
+\section{System Block Diagram}
+\label{sect:SBD}
+\input{sbd}				% Done
+\newpage
+\section{System Hierarchy Diagram}
+\label{sect:SHD}
+\input{shd}				% Done
+\end{landscape}
+
+\section{System Requirement}
+\captionsetup[table]{list=no}
+\input{req_sys}			% Done
+\captionsetup[table]{list=yes}
+\setcounter{table}{\ref{risktable}}
+
+\section{System Level Trade Studies}
+\input{trade_sys}		% Done
+%--------------Subsystem Requirement-------------------------------
+\newpage
+\section{Subsystem Requirements}	% Done
+\label{sect:Subsystem Requirements}
+\captionsetup[table]{list=no}
+\input{req_LM}
+\input{req_DH}
+\input{req_TC}
+\input{req_PS}
+\input{req_EE}
+\input{req_SR}
+\input{req_FR}
+\captionsetup[table]{list=yes}
+\setcounter{table}{\ref{tab:communication}}
+
+%--------------Tradeoffs
+\section{Trade Studies}
+\subsection{Mechanical Trade Studies}
+\label{sect:mech_to}
+\input{trade_mec}
+
+\subsection{Electrical Trade Studies}
+\label{sect:elec_to}
+\input{trade_ele}
+
+\subsection{Controls Trade Studies}
+\label{sect:ctrl_to}
+\input{trade_con}
+
+%--------------Architecture
+\newpage
+\section{System Architecture}
+\subsection{Mechanical Architecture}
+\subsection{Electrical Architecture}
+\subsection{Control Architecture}
+
+%--------------Detailed Design
+\newpage
+\section{Detailed Design}
+\subsection{Mechanical Design}
+\subsection{Electrical Design}
+\subsection{Control Design}
+
+%--------------Budget
+\newpage
+\section{Budget}
+\label{sect:budgets}
+\input{budgets}
+%--------------Conclusion
+\newpage
+\section{Conclusion}
+\label{sect:Conclusion}
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{reportbib}
+
+\newpage
+\appendix
+\include{Apppic/loadcalc}
+\include{Apppic/frequencies}
+\include{Apppic/optemp}
+\include{Apppic/sensorpower}
+\include{Apppic/jointrange}
+
+\end{document}

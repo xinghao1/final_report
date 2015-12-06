@@ -1,0 +1,235 @@
+\begin{thebibliography}{10}
+
+\bibitem{RFP}
+MacDonald Dettwiler and Associates.
+\newblock {Canada's Next Generation Robotics - Request for Proposal}, 2015.
+
+\bibitem{moon_farside}
+Leonard David.
+\newblock {NASA Mulls Deep-Space Station on Moon's Far Side}.
+\newblock
+  \url{http://www.space.com/17856-nasa-deep-space-station-moon-farside.html},
+  2012.
+\newblock Accessed: 2015/12/05.
+
+\bibitem{deep_space}
+Brand N.~Griffin David~Smitherman.
+\newblock {Habitat Concepts for Deep Space Exploration}.
+\newblock
+  \url{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20140012883.pdf},
+  2014.
+\newblock Accessed: 2015/12/05.
+
+\bibitem{deep_auto}
+F.~Kabanza P.~Bellefeuille C.~Langley, A.~Allen.
+\newblock {Toward Autonomy for Deep-Space Infrastructure}.
+\newblock
+  \url{http://robotics.estec.esa.int/i-SAIRAS/isairas2014/Data/Session%2010c/ISAIRAS_FinalPaper_0042.pdf},
+  2014.
+\newblock Accessed: 2015/12/05.
+
+\bibitem{OST}
+United Nations.
+\newblock {Treaty on Principles Governing the Activities of States in the
+  Exploration and Use of Outer Space, including the Moon and Other Celestial
+  Bodies}.
+\newblock \url{http://www.unoosa.org/pdf/gares/ARES_21_2222E.pdf}, 1966.
+
+\bibitem{IDSS}
+NASA.
+\newblock {International Docking System Standard (IDSS) Interface Definition
+  Document (IDD)}.
+\newblock
+  \url{http://www.nasa.gov/pdf/490477main_idss_idd_rev101810%200924.pdf}, 2010.
+
+\bibitem{FAA}
+Federal~Aviation Administration.
+\newblock {The Space Environment}.
+\newblock
+  \url{https://www.faa.gov/other_visit/aviation_industry/designees_delegations/designee_types/ame/media/Section\%20III.4.1.2\%20The\%20Space\%20Environment.pdf}.
+\newblock Accessed: 2015/09/22.
+
+\bibitem{Asteroid}
+R.~L. Korotev.
+\newblock {METEORITE OR METEORWRONG? - density and specific gravity}.
+\newblock \url{http://meteorites.wustl.edu/id/density.htm}.
+\newblock Accessed: 2015/09/22.
+
+\bibitem{NASAsysreq_Kumar}
+R.~Kumar and R.~Hayes.
+\newblock {System Requirements and Design Features of Space Station Remote
+  Manipulator System Mechanics}.
+\newblock
+  \url{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19910015291.pdf}.
+
+\bibitem{FAA_radiation}
+Federal~Aviation Administration.
+\newblock {The Space Environment}.
+\newblock
+  \url{https://www.faa.gov/other_visit/aviation_industry/designees_delegations/designee_types/ame/media/Section%20III.4.1.2%20The%20Space%20Environment.pdf}.
+
+\bibitem{malfunction}
+MarkW.~Maimone Jeffrey J.~Biesiadecki, P. Chris~Leger.
+\newblock {Tradeoffs Between Directed and Autonomous Driving on the Mar
+  Exploration Rovers}.
+\newblock
+  \url{https://www-robotics.jpl.nasa.gov/publications/Mark_Maimone/tradeoffs_ijrr_07.pdf},
+  2007.
+\newblock Accessed: 2015/12/05.
+
+\bibitem{thermal_sys}
+David~G. Gilmore.
+\newblock {\em {Spacecraft Thermal Control Handbook, Volume I: Fundamental
+  Technologies}}.
+\newblock Aerospace Corp, 2002.
+
+\bibitem{comb_thermal}
+{\em {GOES I-M DataBook}}.
+\newblock Space Systems Loral, 1996.
+
+\bibitem{solar_panel}
+Arthur Smith.
+\newblock {The Case For Space Based Solar Power Development}.
+\newblock \url{http://www.spacedaily.com/news/ssp-03b.html}, 2003.
+\newblock Accessed: 2015/12/05.
+
+\bibitem{ca_era_communication}
+Tommaso~Sgobba Gary E. Musgrave~Ph.D, Axel~Larsen.
+\newblock {\em {Safety Design for Space Systems}}.
+\newblock Elsevier Science, 2009.
+
+\bibitem{roboserve}
+Jr. F.~Morring.
+\newblock {Robotic Servicing Seen As Beneficial For Human Exploration}.
+\newblock
+  \url{http://aviationweek.com/awin/robotic-servicing-seen-beneficial-human-exploration}.
+
+\bibitem{ERAjoint}
+D.~Verhoeven.
+\newblock {Space Mechanisms and Tribology for the Joints of the European Robot
+  Arm (ERA)}.
+\newblock
+  \url{http://www.esmats.eu/esmatspapers/pastpapers/pdfs/1999/verhoeven.pdf}.
+
+\bibitem{temp_sensors}
+W.~Kester{,}~J. Bryant and W.~Jung.
+\newblock {Temperature Sensors}.
+\newblock
+  \url{http://www.analog.com/media/cn/training-seminars/design-handbooks/temperature_sensors_chapter7.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{CJME_EE}
+F.~Feng{,} Y. W. Liu{,}~H. Liu and H.~G. Cai.
+\newblock {Design schemes and comparison research of the end-effector of large
+  space manipulator}.
+\newblock {\em Chinese Journal of Mechanical Engineering}, 25:674--687, 2012.
+
+\bibitem{orbital_capture}
+S.~Stamm and P.~Motaghedi.
+\newblock {Orbital Express Capture System: concept to reality}.
+\newblock
+  \url{https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0CCMQFjABahUKEwjnhYO4_-PIAhUJOD4KHeHDA6w&url=http%3A%2F%2Fproceedings.spiedigitallibrary.org%2Fdata%2FConferences%2FSPIEP%2F23638%2F78_1.pdf&usg=AFQjCNF9IRxuXLLgWgLNJ6nhpsV8AOlW1g&sig2=28L88GvkGFYKDdwUMC28rw}.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{ERA_EE}
+C.~J. M. Heemskerk{,}~M. Visser and D.~Vrancken.
+\newblock
+  {http://robotics.estec.esa.int/ASTRA/Astra2006/Papers/ASTRA2006-3.1.2.05.pdf}.
+\newblock
+  \url{http://robotics.estec.esa.int/ASTRA/Astra2006/Papers/ASTRA2006-3.1.2.05.pdf},
+  2006.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{arm_comp}
+P.~Laryssa{,} E. Lindsay{,} O. Layi{,} O. Marius{,} K. Nara{,}~L. Aris and
+  T.~Ed.
+\newblock {International Space Station Robotics: A Comparative Study of ERA,
+  JEMRMS and MSS}.
+\newblock In {\em 7th ESA Workshop on Advanced Space Technologies for Robotics
+  and Automation 'ASTRA 2002'ESTEC}, 2002.
+
+\bibitem{ISS_Harmony}
+National Aeronautics and Space Administration.
+\newblock {International Space Station: Harmony}.
+\newblock
+  \url{http://www.nasa.gov/mission_pages/station/structure/elements/node2.html#.VjP1L7erRD-}.
+\newblock Accessed: 2015/10/30.
+
+\bibitem{delta_launch}
+United~Launch Alliance.
+\newblock {Delta IV Launch Services User’s Guide}.
+\newblock
+  \url{http://www.ulalaunch.com/uploads/docs/Launch_Vehicles/Delta_IV_Users_Guide_June_2013.pdf},
+  2013.
+\newblock Accessed: 2015/10/28.
+
+\bibitem{atlas_launch}
+United~Launch Alliance.
+\newblock {Atlas V Launch Services User’s Guide}.
+\newblock \url{http://www.ulalaunch.com/uploads/docs/AtlasVUsersGuide2010.pdf},
+  2010.
+\newblock Accessed: 2015/10/28.
+
+\bibitem{ERA_jointctrl}
+J.~F.~T. Bos and R.~A. Bosman.
+\newblock {Control of the joint runaway hazard for the European Robotic Arm}.
+\newblock
+  \url{http://s3.amazonaws.com/zanran_storage/www.nlr.nl/ContentPages/18804953.pdf},
+  1998.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{MSSS_cameras}
+Malin Space~Science Systems.
+\newblock {ECAM-C30}.
+\newblock \url{http://www.msss.com/brochures/c30.pdf}, 2013.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{highres_proxsensor}
+R.~Blaser.
+\newblock {High Resolution Standard Proximity Sensor }.
+\newblock \url{http://www.vibro-meter.com/pdf/hrsps-info.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{ATI_forcesensor}
+ATI~Industrial Automation.
+\newblock {Capacitive 6-Axis Force Sensor: Installation and Operation Manual}.
+\newblock
+  \url{http://www.ati-ia.com/app_content/Documents/9610-05-Capacitive%206-Axis%20Force%20Sensor.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{Honeywell_torquesensor}
+Honeywell.
+\newblock {TMS 9000 Rotary Torque Measurement System}.
+\newblock \url{https://stevenengineering.com/tech_support/PDFs/31TORQUE.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{ERA_collisionprevent}
+F.~Fusco and R.~Gallerini.
+\newblock {European Robotic Arm: The Problem of Preventing Collisions}.
+\newblock \url{http://robotics.estec.esa.int/ASTRA/Astra2000/Papers/2.1-1.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{Space_teleop_robot}
+A.~R. Seebass{,} S.~B. Skaar and C.~F. Ruoff.
+\newblock {\em {Teleoperation and Robotics in Space}}, volume 161.
+\newblock American Institute of Aeronautics and Astronautics.
+
+\bibitem{spacedesigntemp}
+J.~E. Keese.
+\newblock {Spacecraft Thermal Control Systems}.
+\newblock
+  \url{http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-851-satellite-engineering-fall-2003/lecture-notes/l23thermalcontro.pdf}.
+
+\bibitem{NASAEE_Mishkin}
+A.H. Mishkin and B.M. Jau.
+\newblock {Space-Based Multifunctional End Effector Systems}.
+\newblock
+  \url{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19890001866.pdf}.
+
+\bibitem{NASAinspect_Hayati}
+H.~Seraji W. S. Kim K.~Tso S.~Hayati, J.~Balaram and V.~Prasad.
+\newblock {Remote Surface Inspection System}.
+\newblock
+  \url{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19930022910.pdf}.
+
+\end{thebibliography}

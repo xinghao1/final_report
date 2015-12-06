@@ -1,0 +1,20 @@
+\section{Transmitting Frequencies of Subsystems}
+\label{app:frequencies}
+\begin{table}[H]
+\caption{Frequencies of Subsystems}
+\centering
+\begin{tabular}{cc}
+\toprule
+\textbf{Component}	&	\textbf{Frequency of communication with DH (\si{\hertz})}	\\
+\midrule
+\textbf{Motor/Brake Drive Amplifier}	&	20 \cite{ERA_jointctrl}			\\
+\textbf{Resolvers}						&	300 \cite{ERA_jointctrl}		\\
+\textbf{Camera}							&	20 \cite{MSSS_cameras}			\\
+\textbf{Proximity Sensor}				&	16500 \cite{highres_proxsensor}	\\
+\textbf{Force Sensor}					&	1000 \cite{ATI_forcesensor}		\\
+\textbf{Torque Sensor}					&	1000\cite{Honeywell_torquesensor}\\
+\textbf{Thermocouple}					&	35 \cite{temp_sensors}			\\
+\bottomrule
+\end{tabular}
+\end{table}
+The rate of data transfer between DH and Outpost/Transport Vehicle is typically between \SI{1}{\hertz} to \SI{12.5}{\hertz}. For this robotic system, it can be reasonably assumed that data will be recorded at a rate of \SI{1}{\hertz}, with the possibility of obtaining the most updated data from DH when desired \cite{ERA_collisionprevent}\cite{Space_teleop_robot}. The only exception is the \gls{CLU}, where the video feedback to the outpost will be about \SI{20}{\hertz} \cite{MSSS_cameras}.

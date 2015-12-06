@@ -1,0 +1,39 @@
+\section{Thermal Calculations}
+\label{app:tempcalc}
+\setcounter{equation}{0}
+This calculation shows expected surface temperature of the system when it is fully exposed to the sunlight.
+
+The thermal equation can be expressed as:
+\begin{equation} 
+q_{absorbed}+q_{internal} = q_{radiation}
+\end{equation}
+\begin{equation} 
+q_{radiation}=e\times A\times\sigma \times T^{4}
+\end{equation}
+\begin{equation} 
+q_{absorbed}=a\times A\times q_{sun}
+\end{equation}
+Due to lack of atmosphere, there is little heat transfer by conduction and convection. Assuming the sun is the primary source of absorbed heat and the system is located in EML2, albedo and emission, which are caused by radiation from earth or reflection from the earth, were considered insignificant.
+\begin{equation}
+q_{absorbed}=q_{radiation}
+\end{equation}
+\begin{equation}
+a\times A\times q_{sun}=e\times A\times\sigma \times T^{4}
+\end{equation}
+where: \\
+$e$: Emissivity\\
+$A$: Surface Area \\
+$\sigma$: Stefan-Boltzmann Constant \\
+$T$: Surface Temperature \\
+$a$: Absorptivity \\
+$q_{sun}$: Solar Irradiance \\
+
+
+Based on the trade studies, carbon fiber is selected as the surface material, which has emissivity and absorptivity of approximately 0.85. EML2 is approximately 1 astronomical unit away from the Sun. Assuming the system is fully exposed to sunlight at EML2, the solar irradiance is expected to be approximately \SI{1360}{\watt\per\square\metre}\cite{IM_solidprop}\cite{GPL_solar}.
+
+Substituting the variables in the equation, the temperature of the surface can be calculated:
+\begin{center}
+$T_{surface} =(\frac{a\times q_{sun}}{e\times \sigma})^{\frac{1}{4}}$ \\
+$T_{surface} = 394 K$
+\end{center}
+Carbon fiber has absorptance/emissivity ratio of approximately 1. White paint coatings, such as Zerlauts White Paint and Hughson White Paint, have much lower ratio. Using \textit{Hughson White Paint Z-202+1000} as an example, which has absorptivity of 0.4 and emissivity of 0.87, the expected surface temperature decreases by \SI{70}{\kelvin} to approximately \SI{324}{\kelvin} \cite{RRE_solar}. 

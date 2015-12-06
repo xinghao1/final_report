@@ -1,0 +1,125 @@
+\subsection{Subsystem DH: Data Handling and Processing}
+\label{req_DH}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+% Mechanical
+\textbf{DH-F-01}	&
+The data handling subsystem shall be operational in a vacuum environment. \textit{(Derived from S-E-01)}\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+% Electrical
+
+\textbf{DH-F-02}	& The locomotion subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-03}	& The data handling subsystem shall send commands to the other subsystems (LM, TC, PS, EE, SR). 
+\textit{(Derived from S-F-13, S-F-14)}\\ 
+& \textit{Rationale: required for subsystem operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-04}	& The data handling subsystem shall receive data from the other subsystems (LM, TC, PS, EE, SR). \textit{(Derived from S-F-07)} \\
+ &	\textit{Rationale: required to process data and relay the information to the Outpost} \\
+ &	\textit{Verified by ground testing}			\\
+
+\textbf{DH-F-05}	& The data handling subsystem shall send transmissions to the Outpost. 
+\textit{(Derived from S-F-07)}\\
+& \textit{Rationale: required for communication with the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-06}	& The data handling subsystem shall receive commands from the Outpost. 
+\textit{(Derived from S-F-13, S-F-14)}\\
+& \textit{Rationale: required for manual operation from the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-07}	& The data handling subsystem shall process the data and perform necessary mathematical computations. 
+\textit{(Derived from S-F-13, S-F-14)}\\
+& \textit{Rationale: the subsystem shall calculate amount of torque needed by joints to reach the target area, number and location of active heaters to keep desired subsystems at operational temperature range, and power needed by each subsystem during operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-08}	& The data handling subsystem shall have storage for the received data and commands. \textit{(Derived from S-F-07, S-C-06)} \\
+ &	\textit{Rationale: to ensure operation in case of shutdown or failure} \\
+& \textit{Verified by ground testing}	\\
+\textbf{DH-F-09}	& The data handling subsystem shall have redundant methods for sending and receiving data and commands. \textit{(Derived from S-C-06)} \\
+ &	\textit{Rationale: adding a level of tolerance lowers system risk} \\
+ &	\textit{Verified by ground testing and design analysis}
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+% Mechanical
+\textbf{DH-P-01}	&
+The data handling subsystem shall maintain mechanical integrity between -20\gls{degC} to 65\gls{degC} (\gls{TBC}).
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\	
+
+\textbf{DH-P-02}	&
+The CPU processor of the data handling subsystem shall be operational between \gls{TBD}\gls{degC} to \gls{TBD}\gls{degC}.
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}\\
+
+\textbf{DH-P-03}	&
+The data handling subsystem shall weigh less than 15.75 \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{DH-P-04}	&
+The data handling subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{DH-P-05}	&
+The data handling subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) at \gls{TBD} \gls{dB} during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+% Electrical----------------------------------------
+\textbf{DH-P-06}	& The data handling subsystem shall consume a maximum of 8 \gls{W} of electrical power on average. \textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-07}	& The data handling subsystem shall consume a maximum of 13 \gls{W} of electrical power during peak. \textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-08}	& The data handling subsystem shall transmit data to Outpost at the rate of \gls{TBD} \gls{kbps}.
+\textit{(Derived from DH-F-05)} \\
+ & \textit{Rationale: to ensure the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}				\\
+
+\textbf{DH-P-09}	& The data handling subsystem shall send data to the Outpost with accuracy of \gls{TBD} \%. 
+\textit{(Derived from DH-F-05)} \\
+& \textit{Rationale: required for accurate communication with the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-10}	& The data handling subsystem shall have minimum processing speed of 133 \gls{MHz}. (\gls{TBC})
+\textit{(Derived from DH-F-07 and Trade Study for Processors)} \\
+ & \textit{Rationale: to ensure the subsystem receives appropriate command in time} \\
+  & \textit{Verified by ground testing}		\\
+
+\textbf{DH-P-11}	& The data handling subsystem shall check the data integrity of received commands and data.
+\textit{Derived from DH-F-07)} \\
+ & \textit{Rationale: to ensure accurate data or command is received} \\
+  & \textit{Verified by ground testing and data analysis}	\\
+
+\textbf{DH-P-12}	& The data handling subsystem shall have storage for \gls{TBD} \gls{GB} of data and commands.
+\textit{(Derived from DH-F-08)} \\
+ & \textit{Rationale: to store information for future operations} \\
+ & \textit{Verified by ground testing and data analysis}		 									\\
+\textbf{DH-P-08}	&     The data handling subsystem shall store \gls{TBD} \gls{GB} of data and commands for TBD days. \textit{(Derived from DH-F-08, S-C-06)}  \\
+ & \textit{Rationale: to maintain the data in case of shutdown or failure} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{DH-P-13}	&     The data handling subsystem shall transmit commands or data to other subsystems and the Outpost at frequencies given in \Cref{app:frequencies}.
+\textit{(Derived from DH-F-05)} \\
+ & \textit{Rationale: to ensure the data handling subsystem transmits commands or data to desired subsystem or the Outpost} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}

@@ -1,0 +1,130 @@
+\section{Load Calculations}
+\label{app:loadcalc}
+\setcounter{equation}{0}
+At \gls{EML2}, the gravitational acceleration is nearly zero, the force acting on the arm is coming from external contact like \gls{EVA} or the acceleration of payload.
+
+\large \textbf{Payload reaction force/torque}\\
+\normalsize There is no moving speed and stopping distance requirement proposed by customer. However, we can use the performance of reference design such as Canadarm and Canadarm2 to calculate a reference loading requirement. 
+
+Tip velocity of Canadarm with full payload:$v=\SI{0.06}{\metre/\second}$\\
+Canadarm stopping distance with full payload: $b=\SI{0.6}{\metre}$\\
+Leaving a 30\% margin, Stopping Distance: $b=\SI{0.42}{\metre}$\\
+Maximum payload mass from \gls{RFP}: $m=\SI{10000}{\kilo\gram}$
+
+Assume payload acceleration is constant, the following two equations are used to calculate acceleration:
+\begin{equation}
+b=v_it+\frac{1}{2}at^2
+\end{equation}
+\begin{equation}
+a=\frac{v_f-v_i}{t}
+\end{equation}
+where:\\
+$v_i=v$ is the initial velocity of payload\\
+$v_f=0$ is the final velocity of payload\\
+This gives us a result of $$t=\SI{14}{\second}, a=\SI{0.0043}{\metre/\square\second}$$
+
+The reaction force applied by the payload is 
+$$F=ma=\SI{10000}{\kilo\gram}\times\SI{0.0043}{\metre/\square\second}=\SI{43}{\newton}$$
+
+This reaction force will apply a bending moment to the robotic arm. Another type of load applied by the payload is torque due to the rotational motion. Canadarm2's rotational velocity and stopping angle are used. 
+
+Rotational Velocity: $\omega=\SI{0.24}{\degree/\second}=\SI{0.0042}{rad/\second}$ \cite{NASAsysreq_Kumar}\\
+Rotational Stopping Distance: $\theta=\SI{3.8}{\degree}$
+Leaving a 30\% margin, Stopping Distance: $\theta=\SI{2.9}{\degree}=\SI{0.051}{\radian}$
+
+These two performance characteristics of Canadarm2 are associated with payload that has mass of 209000 \gls{kg} and size of 4.5 \gls{m} in diameter and 17 \gls{m} in length. This mass is twice of the maximum required in \gls{RFP} and the size of the payload was not specified in the \gls{RFP}. The size of the payload handled by the robotic system is assumed half the length of Canadarm2 payload. This size is also a close resemblance of a service module on \gls{ISS} \cite{ISS_Harmony}.
+
+Maximum payload mass from \gls{RFP}: $m=\SI{10000}{\kilo\gram}$
+Payload size: diameter $d=\SI{4.5}{\metre}$; length $l=\SI{8.5}{\metre}$
+Assume payload has uniform density, payload moment of inertia:
+$$I=\frac{1}{4}m(\frac{d}{2})^2+\frac{1}{2}ml^2=\SI{253490}{\kilo\gram\square\metre}$$
+The axis for the moment of inertia is chosen according to the location of the grapple fixture on the \gls{ISS} module\cite{ISS_Harmony}. The axis is marked as a black dotted line in \Cref{fig:harmony_axis}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{Apppic/harmony}
+\caption{Axis used to calculate moment of inertia}
+\label{fig:harmony_axis}
+\end{figure}
+
+Assuming payload rotational acceleration is constant, the following two equations are used to calculate rotational acceleration.
+\begin{equation}
+\theta=\omega_it+\frac{1}{2}\alpha t^2
+\end{equation}
+\begin{equation}
+\alpha=\frac{(\omega_f-\omega_i)}{t}
+\end{equation}
+where:\\
+$\omega_i=\omega$ is the initial rotational velocity of payload\\
+$\omega_f=0$ is the final rotational velocity of payload
+
+This gives us the result of $$t=\SI{24}{\second}, \alpha=\SI{0.00177}{\radian/\square\second}$$
+The reaction torque applied by the payload is then
+$$\tau=I\alpha=\SI{253490}{\kilo\gram\square\metre}\times \SI{0.00177}{\radian/\square\second}=\SI{448.7}{\newton\metre}$$
+
+\large \textbf{Holding/Reaction forces}\\
+\normalsize Requirement \textbf{EE-P-02} states that the end effector subsystem shall apply holding or reaction forces of \SI{200}{\newton} in any direction.
+
+\large \textbf{Holding/Reaction forces}\\
+\normalsize The robotic arm can be modeled as a cantilever beam and the highest load occurs when the arm is straight as shown in \Cref{fig:loading} below. The holding and reaction force is higher than the payload reaction force, therefore the force of 200 \gls{N} from holding and reaction is used.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Apppic/loading}
+\caption{Maximum loading configuration of system}
+\label{fig:loading}
+\end{figure}
+
+The maximum moment is at the end effector and shoulder joint.
+$$M=FL=\SI{2400}{\newton\metre}$$
+The moment at the lock where the telescopic boom is locked is:
+$$M_{Lock} = FL_{Lock} = \SI{1800}{\newton\metre}$$
+The moment at the elbow joint is:
+$$M_{elbow} = FL_{elbow} = \SI{1200}{\newton\metre}$$
+Given factor of safety of 1.5, the final bending moments on the arm are:
+$$M=\SI{3600}{\newton\metre}, M_{Lock}=\SI{2700}{\newton\metre}, M_{elbow}=\SI{1800}{\newton\metre}$$
+The rotational torque load on the arm is:
+$$T = \SI{448.7}{\newton\metre}\cdot1.5=\SI{673.05}{\newton\metre}$$
+
+\large \textbf{Other reference load requirement}\\
+\normalsize \textbf{End Effector}\\
+The end effectors of Canadarm2 need to perform snare, rigidize and latch mechanism, the load transfer capability of the end effector are \cite{NASAsysreq_Kumar}:\\
+i) ``950 \gls{Nm} torque and 1220 \gls{Nm} bending moment when snared and rigidized, allowing \SI{3}{\degree} separation at the interface."\\
+ii) ``3210 \gls{Nm} moment about any axis and 1110 \gls{Nm} axial/shear force when snared, rigidized and latched and no separation at the interface"
+
+\textbf{Vibrational Load}\\
+During the launch of the aircraft, the robotic system will experience vibrational load and shock load due to engine firing and engine cut off. While the type of the launch vehicle is specified in \gls{RFP}, the common launch vehicles used are Atlas V and Delta IV, and design characteristics use these vehicles. The vibration design, shock design and testing characteristics are presented in \Cref{delta_launch,atlas_launch} below
+
+\begin{table}[H]
+\centering
+\caption[Vibration design, shock design and testing characteristics of Delta IV]{Vibration design, shock design and testing characteristics of Delta IV \cite{delta_launch}}
+\begin{tabular}{|c|c|c|c|}
+\hline
+	&	\textbf{Frequency (\gls{Hz})}	&	\textbf{Test Level}	&	\textbf{Sweep Rate}	\\\hhline{|=|=|=|=|}
+{\textbf{Sinusoidal Vibration}}	&	5 to 7.4	&	1.27 \gls{cm} double amplitude	&	\multirow{2}{*}{2 octaves/min}	\\\cline{2-3}
+{\textbf{Axial}}	&	7.4 to 100	&	1.4 \gls{g} (zero to peak)	&	\\\hline
+{\textbf{Sinusoidal Vibration}}	&	5 to 6.2	&	1.27 \gls{cm} double amplitude	&	\multirow{2}{*}{2 octaves/min}	\\\cline{2-3}
+{\textbf{Lateral}}	&	6.2 to 100	&	1.0 \gls{g} (zero to peak)	&	\\\hline
+\textbf{Shock}	&	150	&	120 \gls{g}	&	N/A	\\\hline
+
+\end{tabular}
+\label{delta_launch}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption[Vibration design, shock design and testing characteristics of Atlas V]{Vibration design, shock design and testing characteristics of Atlas V \cite{atlas_launch}}
+\begin{tabular}{|c|c|c|c|}
+\hline
+	&	\textbf{Frequency (Hz)}	&	\textbf{Test Level}	&	\textbf{Sweep Rate}	\\\hhline{|=|=|=|=|}
+{\textbf{Sinusoidal Vibration}}	&	\multirow{2}{*}{5 to 100}	&	\multirow{2}{*}{1.125 \gls{g} (zero to peak)}	&	\multirow{2}{*}{2 octaves/min}	\\
+{\textbf{Axial}}	&		&		&	\\\hline
+{\textbf{Sinusoidal Vibration}}	&	\multirow{2}{*}{5 to 100}	&	\multirow{2}{*}{0.75 \gls{g} (zero to peak)}	&	\multirow{2}{*}{2 octaves/min}	\\
+{\textbf{Axial}}	&		&		&	\\\hline
+\textbf{Shock}	&	270	&	120 \gls{g}	&	N/A	\\\hline
+\end{tabular}
+\label{atlas_launch}
+\end{table}
+
+
+

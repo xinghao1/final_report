@@ -1,0 +1,103 @@
+\subsubsection{Operational Environment}
+\label{environment}
+\Cref{op_environment} lists several environments that pose risk to the mission. Several conditions in \gls{EML2}, such as thermal and micro-meteoroid environment are considered less harsh than those in low-earth orbit. 
+\begin{table}[H]
+\caption{Description of Operational Environment}
+\label{op_environment}
+\centering
+\begin{tabular}{|P{1.7cm}|P{3cm}|P{3.1cm}|P{7cm}|}
+\hline
+\textbf{Type}	&	\textbf{Environment}		&	\textbf{Value}	&	\textbf{Description}	\\\hhline{|=|=|=|=|}
+\multirow{4}{1.7cm}{General}
+&	Gravity				&	Low- or Zero-g (\gls{TBC})				&	Negligible gravitational forces exist at \gls{EML2}   \\\cline{2-4}
+&	Pressure			&	Negligible (\gls{TBC})					
+&	Due to the lack of atmosphere and vacuum environment, the pressure is low    \\\cline{2-4}
+&	Vibrational Load			&	\gls{TBD}						
+&	During the launch, the system experiences vibrational loads that can damage the components  \\\hline
+\multirow{3}{1.7cm}{Radiation and Charged Particles}
+&	Electromagnetic Radiation	&	Irradiance: ~1300 \gls{W/m2} (\gls{TBC})	
+& 	Radiation can corrode equipment and overload cameras; better unit than temperature to quantify thermal energy, because space is vacuum \cite{FAA}		\\\cline{2-4}
+&	Solar Flare				&	\gls{TBD}	
+&	Release of huge energy and emits radiation \cite{FAA}	\\\cline{2-4}
+&	Cosmic Rays	&	\gls{TBD}	
+&	High-energy radiation that originates mainly outside the solar system \cite{FAA}	\\\hline
+\multirow{3}{1.7cm}{Foreign Objects}
+&	Micro-meteoroid		&	7000 \gls{m/s} or greater (\gls{TBC}) \cite{FAA}		
+&	Very small pieces of rock that moves at high velocity; May damage the system \cite{FAA}	\\\cline{2-4}
+&	Asteroid	&	Average density: 3.0 to 3.7 \gls{g/cm3} \cite{Asteroid}		
+&	Small rock that orbits around the sun; May seriously damage the system		\\\cline{2-4}
+&	Space Debris			&	Neglibigle							
+&	Collection of man-made object that orbit around the Earth; examples include spent rockets and satellites; May damage the system, but unlikely to be at \gls{EML2} \cite{FAA}				\\\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Major Mission Components and Interconnections}
+Refer to \Cref{sect:MLBD}
+\subsubsection{Interfaces to External Systems or Procedures}
+Refer to \Cref{sect:MLBD}
+
+%------------------------------------------------------------------------------------------------------------------------------
+
+\subsubsection{System Capabilities and Functions}
+\label{functions}
+The system will assist the lunar Outpost in the mission. The system will conduct the mission with the following functions:
+\begin{itemize}
+\item Reconfigure target modules on the Outpost
+\item Inspect the Outpost and perform maintenance and repair if necessary
+\item Capture and berth visiting spacecraft
+\item Transport Outpost crew performing \gls{EVA}
+\item Perform contingency operations based on commands from Outpost crew or ground control
+\end{itemize}
+\gls{FFBD} in \Cref{sect:FFBD} provides specific details on each of the above functions.
+
+%------------------------------------------------------------------------------------------------------------------------------
+
+
+\subsubsection{Operational Risk Factors}
+\label{risks}
+Major operational risk factors are listed in \Cref{risktable} below.
+\begin{longtable}{|P{2.7cm}|P{3.8cm}|P{3.8cm}|P{4.5cm}|}
+\caption{Operational Risk Factors}\label{risktable}\\\hline
+\textbf{Risk}				&	\textbf{Cause}		&	\textbf{Possible Result}		&	\textbf{Mitigation Plan}	\\\hhline{|=|=|=|=|}
+\endfirsthead
+\hline
+\textbf{Risk}				&	\textbf{Cause}		&	\textbf{Possible Result}		&	\textbf{Mitigation Plan}		\\\hhline{|=|=|=|=|}
+\endhead
+\textbf{Component Malfunction}	&	Manufacturing faults, software errors, and radiation	&	Loss in operation capabilities; Possible mission failure	&	Perform thorough testing with safety margins; Implement various redundancies	\\\hline
+\textbf{Component Damage}	&	Vibrations during launch and operation, impacts from micro-meteoroids and debris in space, and radiation		&	Loss in operational capabilities; Possible mission failure	&	Implement redundancies and safety margins; Ensure sufficient spare parts are available	\\\hline
+\textbf{Human Errors}		&	Exhausted astronauts, ground control making errors	&	Loss of operational capabilities; Possible mission failure; Possible loss of life	&	Provide specific operational procedure to astronauts; Require approval prior to commencing operations to prevent accidental operation	\\\hline
+\textbf{Launch Delay}	&	Inclement weather; Systems not ready	&	Delayed mission	& Schedule manufacturing and testing well before launch; Ensure launch day weather is good for launch	\\\hline
+\textbf{Launch Failure}	&	Launch vehicle malfunction	&	Mission failure	&	Ensure all systems tested and ready before launch	\\\hline	
+\textbf{Lack of Political Will}	&	Negative public sentiment against cost of operation; Major differences between partner countries	&	Loss of funding; Degraded operations due to lack of funding for regular maintenance; Possible mission failure	&	Advertise advantages of Outpost; Ensure proper communication between partners to resolve differences	\\\hline
+%\textbf{Breakdown of communication systems}	&	Malfunction of relay satellite; 	&	Operation without supervision; Possible damage to Outpost; Possible harm to astronauts	&	Implement extra modes of communication as redundancies; System to revert to 'safe mode' after not receiving communication for a set amount of time (TBD)	\\\hline
+\end{longtable}
+	
+
+%------------------------------------------------------------------------------------------------------------------------------
+
+\subsubsection{Performance Characteristics}
+\label{performance}
+
+The system shall have following performance characteristics
+
+\begin{itemize}
+\setlength\itemsep{0px}
+\item{The system has total mass of 315 \gls{kg}} (See \Cref{sect:massbudget})
+\item{The system will be capable of powering all subsystems with an average power of less than 450 \gls{W} and peak power of 600 \gls{W} at 28 \gls{V}} (See \Cref{sect:powerbudget})
+\item{The system will be able to self-manipulate around modules of the Outpost}
+\item{The system will be able to manipulate loads of up to 10000 \gls{kg} \cite{RFP}}
+\item{The system will be able to apply holding or reaction forces of 200 \gls{N} in all directions \cite{RFP}}
+\item{The system will be manufactured such that it is possible to be assembled in space}
+\item{The system will have an operating life of 10 years \cite{RFP}}
+\item{The system will be able to perform free-flying capture and docking of visiting spacecraft within a certain time (\gls{TBD})}
+\item{The system will be able to maintain safe state for up to 30 \gls{min} of loss of signal}
+\item{The system will transmit operation results and mission status to the Outpost}
+\end{itemize}
+%------------------------------------------------------------------------------------------------------------------------------
+
+\subsubsection{Quality Attributes}
+\label{quality}
+The following are quality attributes that are used to evaluate the system.
+%\begin{itemize}
+%
+%\end{itemize}

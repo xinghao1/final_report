@@ -1,0 +1,203 @@
+% Done
+\subsection{Electrical Trade Studies}
+\label{subsec:Electrical Trade Studies}
+%----------------------------Power Storage------------------------------
+\subsubsection{Power Storage}
+\label{sect:powerto}
+In order to provide the robotic system with power to run during contingencies, a power storage subsystem is required. A trade study of the two most commonly used rechargeable batteries in space, Li-ion and NiH$_2$ batteries,
+ is conducted in \Cref{table:powerto}.
+\begin{table}[H]
+\centering
+\caption{Trade Study for type of Power Storage}
+\begin{tabular}{|P{6cm}|P{4.2cm}|P{4.2cm}|}
+\hline
+	&	\textbf{Li-ion}	&	\textbf{Ni-H}	\\\hhline{|=|=|=|}
+\textbf{Used in}	&
+Mars Rovers: Spirit \& Opportunity \cite{Liion_Mars}	&
+International Space Station \cite{ISS_power}	\\\hline
+\textbf{Specific Energy (Wh/kg)}	&
+\textcolor{OliveGreen}{150 \cite{batt_primer}}	&	
+\textcolor{red}{65 \cite{NiH_se}}	\\\hline
+\textbf{Energy Density (Wh/L)}	&
+\textcolor{OliveGreen}{400 \cite{batt_primer}}	&	
+\textcolor{red}{10-80 \cite{NASA_energy}}	\\\hline
+\textbf{Cycle Durability}	&
+\textcolor{red}{1000 \cite{batt_primer}}	&	
+\textcolor{OliveGreen}{\textgreater50000 \cite{NASA_energy}}	\\\hline
+\textbf{Operable Temperature (\si{\degreeCelsius})}	&
+\textcolor{OliveGreen}{-20 to 60 \cite{batt_primer}}	&	
+\textcolor{red}{-5 to 30 \cite{NASA_energy}}	\\\hline
+\textbf{Lifespan (years)}	&
+\textcolor{red}{\textgreater2 \cite{NASA_energy}}	&	
+\textcolor{OliveGreen}{\textgreater10 \cite{NASA_energy}}	\\\hline
+\end{tabular}
+\label{table:powerto}
+\end{table}
+Li-ion batteries are choosen since they are able to provide much more energy with a smaller mass and volume than NiH$_2$ batteries. Li-ion batteries are also operable over a much larger temperature range than NiH$_2$ batteries. Although Li-ion batteries can endure much less charge cycles than NiH$_2$, this would not be a huge problem as the batteries will only be used in contingencies, and will not be subjected to discharging and recharging on a frequent basis. The most major drawback related to the use of Li-ion batteries is the short life span, which would mean that it has to be replaced fairly frequently.
+
+%----------------------------Thermal Control------------------------------
+\subsubsection{Type of Thermal Control System}
+\label{sect:thermal_to}
+A trade study on the type of active thermal control system (ACTS) is made for the thermal control subsystem. Types of ATCS include electrically controlled patch heaters, fluid loop system, and louvers: patch heaters consists of an electrical-resistance material between two insulating materials; fluid loop system consists of multiple pipes and pumps and liquid material; and louvers are window shutters with adjustable angle to control heat transfer on the surface.  A trade study was conducted between the three options in \Cref{tab:thermalto}.
+
+\begin{table}[H]
+\centering
+\caption{Trade Study on type of ATCS}
+\begin{tabular}{|P{3.3cm}|P{3.8cm}|P{3.8cm}|P{3.8cm}|}
+\hline
+	&	\textbf{Patch Heater\cite{heater_design}\cite{flex_heater}}	&
+\textbf{Fluid Loop\cite{mech_fluidloop}\cite{hightemp_fluidloop}}	&
+\textbf{Louvers \cite{tc_tech}}	\\\hhline{|=|=|=|=|}
+\textbf{Implementation}	&	
+\textcolor{OliveGreen}{Only require cables to transmit electricity and patch heaters to be placed at various positions to heat the system}	&	
+\textcolor{red}{Very difficult to store cables, pumps and valves for moving parts}	&	
+\textcolor{OliveGreen}{Easy to install on surface}	\\\hline
+\textbf{System Complexity}	&	
+\textcolor{OliveGreen}{Each patch heater is a thin foil\newline Little to no mechanical parts}	&	
+\textcolor{red}{Various pumps, valves and pipes to carry fluid are needed}	&
+\textcolor{orange}{Located on the surface of the system\newline Physically alters shape of system}	\\\hline
+\textbf{Power Consumption}	&	
+\textcolor{orange}{Dependent on area needed to be heated, approximately \SI{5}{\watt\per\square{in}}}	&
+\textcolor{red}{\textless\SI{150}{\watt} for CFC-11 (Exact numbers can vary to up to \SI{14}{\kilo\watt} depending on fluids used)}	&
+\textcolor{orange}{Medium power consumption used to drive the movement of the louvers}	\\\hline
+\textbf{System Reliability}	&	
+\textcolor{orange}{Large operational range, area is limited to number of active units}	&
+\textcolor{OliveGreen}{Fluid loop covers larger region of the system}	&
+\textcolor{red}{System heats up from exposure to sunlight\newline Louvers do not heat up system when there is no sunlight}	\\\hline
+\textbf{System Mass}	&
+\textcolor{OliveGreen}{\textless\SI{0.1}{\kilo\gram} for standard patch heaters}	&
+\textcolor{red}{\textless\SI{25}{\kilo\gram}, excluding fluid and radiators}	&
+\textcolor{orange}{Medium, mostly mass of motors needed to drive louvers}	\\\hline
+\end{tabular}
+\label{tab:thermalto}
+\end{table}
+The main drivers behind the decision were reliability and implementation of the ACTS. Louvers, by itself, does not control the temperature of the system. It only adjusts amount of sunlight exposed to the system, and cannot control the temperature when the system is not exposed to sunlight\cite{tc_tech}. Therefore, two other systems are more reliable.
+
+Out of three options, the fluid loop is most difficult to implement. Furthermore, the mass budget of the thermal control system is \SI{12.6}{\kilo\gram} with 30\% mass margin. Trying to implement fluid loop heater with this constraint would be time consuming and costly.
+
+By comparison, patch heaters are much lighter and simpler. The level of tolerance can be increased simply by increasing number of patches and wires, which does not have significant impact on mass or power budget.
+
+While the exact numbers vary, patch heaters consume approximately \SI{5}{\watt\per\square{in}} of patch and fluid loops consume more than \SI{150}{\watt}. The total power consumption is dependent on the size of the area of interest. 
+
+Based on our power budget in \Cref{sect:power}, up to 28 patch heaters can be active during peak. Therefore, at all times, the heating area on the surface is limited to \SI{28}{\square{in}}, or \SI{180.645}{\square\centi\metre}. By selectively heating colder areas, it is possible to maintain the temperature of subsystems in operable range.  Assuming passive thermal blanket covers the system, the heat generated from patches will remain in the system. The combination of patches and radiator can maintain the temperature of subsystems by selectively and cyclically heating colder areas. Moreover, it is possible to heat wider surface at cost of less voltage. Further research needs to be done on choosing which units to activate and calculating optimum duration of heating per unit. Polyamide patch heaters have temperature range of \SI{-200}{\degreeCelsius} to \SI{150}{\degreeCelsius}, which covers operational range of all subsystems \cite{heater_design}.
+
+%----------------------------Network Topology------------------------------
+\subsubsection{Type of Network Topology}
+\label{sect:network_to}
+The network topology used is directly related to the transfer of data across the different subsystems. A trade study on four common network topologies that can be used (bus, mesh, ring and star) was conducted in \Cref{tab:networkto}.
+
+A bus topology uses a common backbone to connect all nodes in the system. There is a direct link between the backbone and each node. 
+
+A mesh topology has every node connected to each other in a complex network of cables. Data can take one of several different paths between two nodes.
+
+A ring topology has every node connected to two other nodes. All data travels in one direction in a ring.
+
+A star topology has every node connected directly to a central hub, with no connections between individual nodes.
+\begin{table}[H]
+\centering
+\caption[Trade Study on type of Network Topology]{Trade Study on type of Network Topology\cite{studytopology}\cite{topology_intro}}
+\begin{tabular}{|P{2.5cm}|P{3cm}|P{3cm}|P{3cm}|P{2.9cm}|}
+\hline
+	&	\textbf{Bus}	&	\textbf{Mesh}	&	\textbf{Ring}	&	\textbf{Star}	\\\hhline{|=|=|=|=|=|}
+\textbf{Mass of System}	&
+\textcolor{OliveGreen}{Only main backbone and a cable connecting backbone to each node}	&
+\textcolor{red}{Many cables required to connect all nodes to each other}	&
+\textcolor{orange}{Requires cables to form a ring around all nodes}	&
+\textcolor{orange}{Requires cables to run across entire distance between central hub and nodes}	\\\hline
+\textbf{Single Fault Tolerance}	&
+\textcolor{orange}{Network fails if failure happens on backbone}	&
+\textcolor{OliveGreen}{Even if one connection fails, other connections remain intact}	&
+\textcolor{red}{Entire network fails if a single node or connection fails}	&
+\textcolor{orange}{Network fails if central hub fails}	\\\hline
+\textbf{System Complexity}	&
+\textcolor{OliveGreen}{Main connection is single backbone with single connections to each node}	&
+\textcolor{red}{Every node needs to connect to every other node}	&
+\textcolor{OliveGreen}{Each node only connects to following and previous node}	&
+\textcolor{OliveGreen}{Each node is only connected to a central hub directly}	\\\hline
+\textbf{Ease of debugging}	&
+\textcolor{red}{Difficult to pinpoint location of faults in system}	&
+\textcolor{red}{Difficult to pinpoint location of faults in system}	&	
+\textcolor{OliveGreen}{Easy to pinpoint location of faults in system}	&	
+\textcolor{OliveGreen}{Easy to pinpoint location of faults in system}	\\\hline
+\textbf{Ease of adding new nodes}	&
+\textcolor{OliveGreen}{Easy to add new nodes to backbone, only one connection to backbone required}	&
+\textcolor{red}{Needs to add connections from new node to every other node, can be complicated for large systems}	&
+\textcolor{red}{Difficult to add new nodes, need to remove and add connections to two nodes}	&
+\textcolor{OliveGreen}{Easy to add new nodes as only a single connection to central hub needs to be made}	\\\hline
+\end{tabular}
+\label{tab:networkto}
+\end{table}
+Since the mass of the system is one of our drivers and the system is required to be single fault tolerant, these are the two most important considerations in our trade study. A bus topology will minimize the mass spent on cables due to needing only a single backbone while star topology is slightly higher as cables are needed to be laid for the entire length between different subsystems. Although both topologies are not single fault tolerant, it is relatively simple to implement a duplicate bus to allow for single fault tolerance in a bus topology whereas adding an additional set of cables as redundancy would result in excessive cables in the system, adding to system complexity. There is also relatively low complexity in a bus topology, although debugging would take a longer time due to the relatively higher difficulty in locating faults in the bus. However, time spent in debugging could easily be traded off as the bus topology will best satisfy our drivers and requirements.
+
+%----------------------------Data Comm------------------------------
+\subsubsection{Type of Data Communication System - Wired vs. Wireless}
+\label{sect:datacomm_to}
+For communication between the robot system and the Outpost, a trade-off study comparing a wire-based communication system and a wireless communication system is shown in \Cref{tab:datacommto}.
+\begin{table}[H]
+\caption{Trade Study for Type of Thermal Control System}
+\begin{tabular}{|P{3.5cm}|P{5.8cm}|P{5.8cm}|}
+\hline
+	&	\textbf{Wire-based Communication System}	&	\textbf{Wireless Communication System}	\\\hhline{|=|=|=|}
+\textbf{Communication speed}	&
+\textcolor{OliveGreen}{Can provide both low and high-speed communication (between 2 and 400 \si{\mega bps}) \cite{spacewire_comm}}	&
+\textcolor{OliveGreen}{Capable of providing high-speed data transformation \cite{CCSDS_design}}	\\\hline
+\textbf{System Complexity}	&
+\textcolor{red}{Entire system consists of connectors, cables, cable assemblies and printed circuit board tracks \cite{spacewire_comm}}	&
+\textcolor{OliveGreen}{No need for cable planning and assembly \cite{CCSDS_design}}	\\\hline
+\textbf{Mass/Volume Occupation}	&
+\textcolor{red}{Connectors and cable assemblies will add to the weight and volume of the whole system \cite{spacewire_comm}}	&
+\textcolor{OliveGreen}{Does not require components like cable assemblies}	\\\hline
+\textbf{Technology Availability}	&
+\textcolor{OliveGreen}{Do not require much technological support. For example, SpaceWire has been used on many previous space missions \cite{spacewire_uses}}	&
+\textcolor{OliveGreen}{Has been previously used on ISS, for example, Space-to-Space Station Radio (SSSR) \cite{commtracksys}}	\\\hline
+\end{tabular}
+\label{tab:datacommto}
+\end{table}
+According to the table, a wireless communication system has more advantages compared to a wire-based communication system. It requires less mass and volume, which satisfies the major drivers of this project.
+
+%----------------------------Redundancy------------------------------
+\subsubsection{Type of Redundancy in System}
+\label{sect:redundancy_to}
+In the RFP, the system is required to be single fault tolerant. This requires the system to have redundancy built in. Similar to the Canadarm2 and ERA, the robotic system will has a redundant electrical systems to assure single fault tolerance. Each sub-unit in the electrical system has a redundant backup unit, and the primary/redundant systems are both fully capable of performing the electrical functions \cite{ISS_robotcompare}. The redundancy in the electrical system will increase the mass; however, the mass of electrical system is relatively light \cite{AER407_Mech}, justifying the use of such redundancy.
+
+There are two ways to implement the redundant system: cross strapped architecture and separate architecture. Cross strapped architecture has a unit that connects to both primary and redundant systems, whereas in a separate architecture , there is no connection between primary and redundant system. The architectures are shown in \Cref{fig:redundancy}. The trade study for these two architectures is shown in \Cref{tab:redundancyto}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[H]{0.5\textwidth}
+%\includegraphics[height=115pt]{nocrossstrap}
+\end{subfigure}
+\hfill
+\begin{subfigure}[H]{0.45\textwidth}
+%\includegraphics[height=115pt]{yescrossstrap}
+\end{subfigure}
+\caption[Separate Architecture and Cross-strapped Architecture]{Separate Architecture and Cross-strapped Architecture \cite{AER407_ElectricalPresentation}}
+\label{fig:redundancy}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Trade Study for Type of Redundancy Architecture}
+\begin{tabular}{|P{3cm}|P{5.5cm}|P{5.5cm}|}
+\hline
+	&	\textbf{Cross Strapped}	&	\textbf{Separate}	\\\hhline{|=|=|=|}
+\textbf{System Reliability}	&
+\textcolor{red}{Used in both primary and redundancy systems, leading to lower mean time to failure of entire system \cite{AER407_electricalnotes}}	&
+\textcolor{OliveGreen}{Redundant system is separate and used only when primary system fails, leading to higher reliability}	\\\hline
+\textbf{System Availability}	&
+\textcolor{OliveGreen}{Can operate in both primary and redundancy systems without reconfiguration \cite{ISS_robotcompare}}	&
+\textcolor{red}{Time gap to switch to redundant system when primary system fails}	\\\hline
+\textbf{System Complexity}	&
+\textcolor{red}{High complexity with complex failure mode analysis \cite{spacecraftdesign}}	&
+\textcolor{OliveGreen}{Low complexity}	\\\hline
+\textbf{Single Fault Point}	&
+\textcolor{red}{Adds single point failure modes \cite{AER407_electricalnotes}}	&
+\textcolor{OliveGreen}{No single point failure mode}	\\\hline
+\end{tabular}
+\label{tab:redundancyto}
+\end{table}
+The separate architecture has the advantage of higher reliability and no single point failure mode; the cross strapped architecture has the advantage of higher reliability. For the thermal control units, which include heaters and heater controllers, the cross strapped architecture is used to keep the robotic system at survival temperature range during the system switching if the primary system is failed. However, to achieve single fault tolerance, there are redundancies built within the thermal control units. There are four heaters connected in parallel so that if one fails the other will continue working, and the thermal controller will also have redundancy.
+
+Another unit that is cross strapped is the Camera and Lighting Unit (CLU) that includes camera, video frame grabber and light. The cameras are used to assist free flyer capture and berthing, the positions of the cameras are fixed for video reference. Thus there will be no redundancy for the cameras and the CLU is cross strapped to both primary and redundant system. However, CLU has built in redundancy for video frame grabbers.
+
+The rest of the system has separate architecture redundancy since it has lower complexity, higher reliability and no single point failure mode. 

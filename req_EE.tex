@@ -1,0 +1,133 @@
+\subsection{Subsystem EE: End Effector}
+\label{sect:EE_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{EE-F-01}	&
+The end effector subsystem shall be able to attach to astronauts for \gls{EVA}.
+\textit{(Derived from S-F-05,S-F-09)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-02}	& The end effector subsystem shall be able to capture visiting vehicles and payloads.
+\textit{(Derived from S-F-09)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-03}	&
+The end effector subsystem shall be able to detach faulty components.
+\textit{(Derived from S-F-06)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-04}	&
+The end effector subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-05}	& The end effector subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-06}	& The end effector subsystem shall receive commands from the data handling subsystem. 
+\textit{(Derived from S-F-13, S-F-14)}\\ 
+& \textit{Rationale: required for control from ground control or Outpost}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-07}	& The end effector subsystem shall manipulate the position of the end effector from the received commands. 
+\textit{(Derived from EE-F-01, EE-F-02, EE-F-03, EE-F-06)}\\
+ &	\textit{Rationale: required for operation} \\
+ &	\textit{Verified by ground testing}	\\
+ 
+\textbf{EE-F-08}	& The end effector subsystem shall send data related to the end effectors to the data handling subsystem. 
+\textit{(Derived from S-F-07)} \\
+ &	\textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ &	\textit{Verified by ground testing}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{EE-P-01}	&
+The end effector subsystem shall manipulate payloads of up to 10000 \gls{kg} (\gls{TBC}).
+\textit{(Derived from S-P-01)} \\
+&	\textit{Rationale: required for operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-02}	&
+The end effector subsystem shall apply holding or reaction forces of 200 \gls{N} in any direction.
+\textit{(Derived from S-P-02)} \\
+&	\textit{Rationale: required for operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-03}	&
+The end effector subsystem shall accommodate for 0 \gls{m} to 0.1 \gls{m} (\gls{TBC}) of linear misalignment in axial direction \cite{NASAsysreq_Kumar}. 
+\textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+&\textit{Verified by ground testing and analysis of the subsystem}	\\
+
+\textbf{EE-P-04}	&
+The end effector subsystem shall accommodate for 0.1 \gls{m} (\gls{TBC}) of linear misalignment in radial direction \cite{NASAsysreq_Kumar}. 
+ \textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-05}	&
+The end effector subsystem shall accommodate for 10\gls{deg} (\gls{TBC}) roll of angular misalignment \cite{NASAsysreq_Kumar}.
+ \textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-06}	&
+The end effector subsystem shall accommodate for 15\gls{deg} (\gls{TBC}) pitch and yaw of angular misalignment \cite{NASAsysreq_Kumar}.
+\textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-07}	&
+The end effector subsystem shall maintain mechanical integrity between -70\gls{degC} to 180\gls{degC}(\gls{TBC}).
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\
+
+\textbf{EE-P-08}	&
+The end effector subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{EE-P-09}	&
+The end effector subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{EE-P-10}	&
+The end effector subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) at \gls{TBD} \gls{dB} during the launch. 
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+
+\textbf{EE-P-11}	& The end effector subsystem shall consume a maximum of 15.4 \gls{W} of electrical power on average.
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-12}	& The end effector subsystem shall consume a maximum of 100 \gls{W} of electrical power on peak. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-13}	& The end effector subsystem shall send the data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. 
+\textit{(Derived from EE-F-08)} \\
+ & \textit{Rationale: to ensure the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}				\\
+
+\textbf{EE-P-14}	& The end effector subsystem shall send data to data handling subsystem with accuracy of 1\gls{deg}. 
+\textit{(Derived from EE-F-08)} \\
+& \textit{Rationale: required for accurate communication with the Outpost} \\
+& \textit{Verified by ground testing}	
+\end{longtable}

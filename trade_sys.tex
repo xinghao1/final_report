@@ -1,0 +1,79 @@
+\subsection{Mechanical Tradeoffs}
+%----------------------------Autonomy---------------------------
+\subsubsection{Level of Autonomy}
+The level of autonomy will determine how the operations should be planed and carried out, and will largely influence the design of data handling and control systems. Therefore, it should be discussed here as one of the major trade-offs. Three levels of autonomy are considered and compared, which are listed below and compared in \Cref{tab:auto}. A limited-autonomous system requires Requires manual operations by the Outpost crew to complete all tasks, a semi-autonomous system shall be able to conduct basic tasks automatically, like change positions, but will require manual control by Outpost crew to complete more complex tasks while a fully-autonomous system shall be able to complete both all tasks without human intervention. 
+
+\begin{longtable}{|P{2.5cm}|P{4.1cm}|P{4.1cm}|P{4.0cm}|}
+\caption{Trade Study for Level of Autonomy}\label{tab:auto}\\
+\hline
+&	\textbf{Limited Autonomous}	&	\textbf{Semi Autonomous}	&	\textbf{Fully Autonomous}	\\\hhline{|=|=|=|=|}
+\endfirsthead
+\hline
+&	\textbf{Limited Autonomous}	&	\textbf{Semi Autonomous}	&	\textbf{Fully Autonomous}	\\\hhline{|=|=|=|=|}
+\endhead
+\textbf{System Complexity}	&	\textcolor{OliveGreen}{Easy to develop\newline Rich technological heritage}	&	\textcolor{OliveGreen}{Existing similar systems}\newline \textcolor{red}{Need software development for the specific operations}	&	\textcolor{red}{Technology is hard to achieve\newline Full software development needed}	\\\hline
+\textbf{System Reliability}	&	\textcolor{OliveGreen}{Operation is fully monitored}\newline \textcolor{red}{Human errors may occur}	&	\textcolor{red}{Simple tasks may be affected by software and component malfunctions}\newline \textcolor{orange}{Complex tasks may be affected by human errors}	&	\textcolor{OliveGreen}{Human error is avoided.}\newline \textcolor{red}{Operation could be under software and component malfunctions \cite{malfunction}}	\\\hline
+\textbf{Operation Duration}	&	\textcolor{red}{Requires control from the Outpost crew or Astronauts\newline Crew time usage on redundant tasks}	&	\textcolor{OliveGreen}{Short for simple tasks}\newline\textcolor{red}{Longer duration for more complex tasks}	&	\textcolor{OliveGreen}{ No human input required\newline Can operate continuously}	\\\hline
+\textbf{Operation Accuracy \& Deviation from plans}	&	\textcolor{OliveGreen}{Deviation from plans is limited by human control}\newline\textcolor{red}{May be affected by human errors}	&	\textcolor{OliveGreen}{Simple Task: not limited by computational resources.
+\newline Complex Task: Human errors and robotic malfunctions are limited}	&	\textcolor{red}{Limited by computational and power resources}	\\\hline
+\end{longtable}
+
+While a fully autonomous system would be ideal for space exploration because it would have high capabilities and efficiency, there are still technical, computational, safety and managerial challenges to overcome before achieving full autonomy. Therefore, taking current technology availability into consideration, a semi-autonomous system has been selected for this robotic system. This will allow the system to perform with relatively lower risk and higher efficiency.
+
+%----------------------------Thermal---------------------------
+\subsubsection{Thermal Control System}
+Thermal regulation systems are required in the system to ensure that temperatures of the system's parts are within the operating ranges. There are two main types of such systems, \gls{ATCS} and \gls{PTCS}. 
+
+\gls{ATCS} makes use of various heating and cooling tools, such as electric heaters, fluid loops and thermoelectric coolers to control the temperature within the system while \gls{PTCS} makes use of insulation to reduce heat transfer and surface coatings which modify the thermal or optical properties of the surface. These two systems are compared in \Cref{table:thermal}.
+\begin{table}[H]
+\caption{Trade Study for Type of Thermal Control System}
+\begin{tabular}{|P{2.5cm}|P{6.35cm}|P{6.35cm}|}
+\hline
+	&	\textbf{\gls{ATCS} \cite{thermal_sys}}	&	\textbf{\gls{PTCS} \cite{thermal_sys}}	\\\hhline{|=|=|=|}
+\textbf{System Complexity}	&	\textcolor{red}{Complex control system needed to respond rapidly to temperature fluctuations}	&	\textcolor{OliveGreen}{Only mechanical parts are added}	\\\hline
+\textbf{System Reliability}	&	\textcolor{OliveGreen}{Outpost crew can manually control the temperature in case of breakdown in control system}\newline\textcolor{orange}{In case of breakdown of the heating and/or cooling elements, only solution is to repair them}	&	\textcolor{red}{Damage will result in loss of ability to maintain other subsystems at their operational temperature ranges}	\\\hline
+\textbf{System Efficiency}	&	\textcolor{OliveGreen}{System can be on Standby mode when temperatures are within operating ranges\newline Only needs to be switched on when temperature is near the limits of operation; Saves power and does its job}	&	\textcolor{OliveGreen}{System can reduce heat transfer without using any power; Very efficient when there is alternating high and low temperatures}\newline\textcolor{orange}{System is unable to regulate temperatures when there is prolonged periods of extreme temperatures}	\\\hline
+\end{tabular}
+\label{table:thermal}
+\end{table}
+According to some further research, it is actually possible to combine these two choices to a semi-active thermal control system \cite{comb_thermal}, which is selected to be used on our robotic system. The main system will be the passive system to slow down the rate of heat transfer between internal components and the exterior environment. The active system will activate when there is excessive heat transfer that the passive system is unable to manage, or when there is damage to the passive system. This allows us to achieve the advantages of power saving and single-fault tolerance in the thermal control system, but we would have to accept the consequence of increasing the mass of the system and designing a more complex control architecture for the active system.
+
+\subsection{Electrical Tradeoffs}
+%----------------------------Power---------------------------
+\subsubsection{Power Generation and Storage System}
+Power supply system is required in the system to distributing power to other subsystems and ensuring they function properly. A system level tradeoff on the method of power supply system is discussed in this section. Two options are considered, one is to have an independent power generation system, such as solar panels; the other is to have the robotic system fully powered by the Outpost. \Cref{tab:power} below provides a detailed comparison between these two options.
+
+\begin{table}[H]
+\caption{Trade Study for Power Generation and Storage System}
+\begin{tabular}{|P{3cm}|P{6.1cm}|P{6.1cm}|}
+\hline
+	&	\textbf{Independent Power System}	&	\textbf{Powered by Outpost}	\\\hhline{|=|=|=|}
+\textbf{System Complexity}	&	\textcolor{red}{Significantly increase the system complexity}	&	\textcolor{OliveGreen}{Simple system}	\\\hline
+\textbf{Mass Required}	&	\textcolor{red}{Significantly increase the mass \newline Common option like solar panels typically cost about 0.02 \gls{kg} per \gls{W} \cite{solar_panel}}	&	\textcolor{OliveGreen}{Lower mass, mainly cost by connection cables}	\\\hline
+\textbf{System Independence}	&	\textcolor{OliveGreen}{Can operate without connection to the Outpost }	&	\textcolor{red}{Unable to operate  on loss of connection to Outpost \newline If mobile, has to return to the Outpost periodically to recharge}	\\\hline
+\end{tabular}
+\label{tab:power}
+\end{table}
+
+Taking into account the mass constraint, which is one of the main drivers of this project, it is decided that the system will not have its own power generation unit and would instead be powered entirely by the Outpost.\\
+However, the system will have a power storage system onboard, which will be charged while the system is connected to the Outpost and can be used in emergency situations when there is a loss in connection between the Outpost and the robotic system. Further details of the power storage system is discussed in \Cref{sect:elec_to}.
+
+
+\subsection{Control/Software Tradeoffs}
+%----------------------------Communication---------------------------
+\subsubsection{Communication Link}
+For the system level tradeoff on communication link, two options are considered. The first one is to direct communication link with only the Outpost, and the second option is to have direct communication link with both Ground Control and the Outpost. They are compared in \Cref{tab:communication} below.
+
+\begin{table}[H]
+\caption{Trade Study for Communication Link}
+\begin{tabular}{|P{2.6cm}|P{6.3cm}|P{6.3cm}|}
+\hline
+	&	\textbf{Direct communication link with only the Outpost}	&	\textbf{Direct communication link with Ground Control \& the Outpost}	\\\hhline{|=|=|=|}
+\textbf{System Complexity}	&	\textcolor{OliveGreen}{Relatively Simple control system}	&	\textcolor{red}{Complex control system}	\\\hline
+\textbf{Design Constraints}	&	\textcolor{OliveGreen}{Will not increase mass, and low in power comsumption}	&	\textcolor{red}{Will significantly increase the mass and power consumption}	\\\hline
+\textbf{Operation Risk}	&	\textcolor{red}{Will completely lose  communication if disconnected from the Outpost}	&	\textcolor{OliveGreen}{Backup communication with Ground System is available if disconnected from the Outpost}	\\\hline
+\end{tabular}
+\label{tab:communication}
+\end{table}
+
+According to \Cref{tab:communication}, having direct communication link with only the Outpost has a significant advantage in mass/power consumption, which matches the main drivers defined. Also, previous space robotic arms like Canadarm2 and \gls{ERA} are both typically operated from the \gls{ISS} \cite{ca_era_communication}. In addition, direct communication with the Ground Control might be impractical because of the time lag in command signals \cite{roboserve}. Hence, it has been decided that our system will contain a communications subsystem to communicate only with the Outpost.

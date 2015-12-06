@@ -1,0 +1,93 @@
+\subsection{Subsystem SR: Sensors}
+\label{sect:SR_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{SR-F-01}	&
+The sensors subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-02}	& The sensors subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-03}	& The sensors subsystem shall receive commands from the data handling subsystem. \textit{(Derived from S-F-14, S-F-15)} \\
+ & \textit{Rationale: required for control from ground control or the Outpost} \\
+ & \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-04}	& The sensors subsystem shall send the graphic data to the data handling subsystem. \textit{(Derived from S-F-07)} \\
+ & \textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{SR-F-05}	& The sensors subsystem shall search for physical damage on the surface of the outpost. \textit{(Derived from S-F-04)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{SR-P-01}	&
+The sensor subsystem shall maintain mechanical integrity between -20\gls{degC} to 65\gls{degC} (\gls{TBC}).
+\textit{(Derived from S-E-02 and Appendix)}\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\
+
+\textbf{SR-P-02}	& The sensor subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{SR-P-03}	&
+The sensor subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{SR-P-04}	&
+The sensor subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) at \gls{TBD} \gls{dB} during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-05}	& The sensors subsystem shall consume a maximum of 52.5 \gls{W} of electrical power on average. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-06}	& The sensors subsystem shall consume a maximum of 60 \gls{W} of electrical power on peak. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-07}	& The sensors subsystem shall send the data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}		\\
+  
+\textbf{SR-P-08}	& The sensors subsystem shall send data to data handling subsystem with accuracy of \gls{TBD} \%. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{SR-P-09}	& The sensors subsystem shall perform \gls{TBD} full scans per day. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: to detect changes on the surface of the Outpost} \\
+ & \textit{Verified by ground testing and data analysis}			\\
+ 
+\textbf{SR-P-10}	& The sensors subsystem shall detect physical damage with size larger than \gls{TBD} \gls{mm} on the surface of the Outpost. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	\\
+ 
+\textbf{SR-P-11}	& The sensors subsystem shall detect location of physical damage on the Outpost within \gls{TBD} \gls{cm}. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	\\
+ 
+\textbf{SR-P-12}	& The sensors subsystem shall receive commands at frequencies given in \Cref{app:frequencies}. \textit{(Derived from SR-F-01)} \\
+ & \textit{Rationale: to ensure accuracy in measurement of required data} \\
+ & \textit{Verified by ground testing}	\\
+ 
+\textbf{SR-P-13}	& The sensors subsystem shall transmit data at frequencies given in \Cref{app:frequencies}. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure accuracy in measurement of required data} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}

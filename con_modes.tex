@@ -1,0 +1,19 @@
+\subsubsection{Modes}
+\begin{itemize}[label={},leftmargin=0pt]
+\item\textbf{Semi-autonomous}: System performs functions and tasks autonomously with instructions from operators and keeping operators in the loop.
+\item\textbf{Manual}: Operator commands the end effectors' translational and rotational velocities, with all joints being moved simultaneously.
+\item\textbf{Single-joint}: Operator moves a single joint at a time, while keeping the other joints locked.
+\item\textbf{Testing}: System switches on all subsystems one by one and pings each of them to ensure they are working and are able to receive and transmit signals.
+\item\textbf{Start-up}: All essential subsystems are switched on.	
+\item\textbf{Keep-alive}: Non-essential systems are switched off, only data handling and thermal control subsystems are kept on to keep all subsystems within survival temperatures.
+\end{itemize}
+
+\subsubsection{States}
+\begin{itemize}[label={},leftmargin=0pt]
+\item\textbf{Standby}: System will return to home position and is ready to receive and execute commands immediately. 
+\item\textbf{Execution}: System is executing a command.
+\item\textbf{Sleep}: Shut down all non-essential subsystems and await wake signal in order to save power.
+\end{itemize}
+
+\subsubsection{Transition Between Modes}
+After each operation is completed, system will automatically return to Standby state, where it will await the next command. If commands are queued within the system, system will proceed to next command immediately without returning to Standby state.

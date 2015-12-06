@@ -1,0 +1,68 @@
+\subsection{Subsystem PS: Power Supply}
+\label{sect:PS_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{PS-F-01}	&
+The power subsystem shall secure all cables and distribution networks to the other subsystems.
+\textit{(Derived from S-E-01, S-E-05, S-E-08)}	\\
+& \textit{Rationale: required for operation}	\\
+&\textit{Verified by analysis of the subsystem design}	\\
+
+\textbf{PS-F-02}	&
+The power subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{PS-F-03}	& The power subsystem shall mitigate potential power surges. 
+\textit{(Derived from S-C-03, S-C-04)} \\
+& \textit{Rationale: to ensure system reliability} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{PS-F-04}	& The power subsystem shall supply uninterrupted power to all subsystems that require electric power.
+\textit{(Derived from S-C-03, S-C-04)} \\
+ & \textit{Rationale: to ensure continuous operation of the system} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-05}	& The power subsystem shall transmit power usage data to the data handling subsystem.
+\textit{(Derived from S-F-07)} \\
+ & \textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ &  \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-06}	& The power subsystem shall supply voltage to subsystems based on required voltages of each subsystem. \textit{(Derived from S-C-04, S-C-05)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-07}	& The power subsystem shall have redundant methods for distributing power. \textit{(Derived from S-C-06)} \\
+ & \textit{Rationale: adding a level of tolerance lowers system risk} \\
+ & \textit{Verified by ground testing and design analysis}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{PS-P-01}	& The power subsystem shall convert power to specific voltages (TBD) with accuracy of 1 \gls{V}. (\gls{TBC} for sensors, refer to \Cref{app:sensorpower})\\
+& \textit{Rationale: required for subsystem operation and ensure system reliability} \\
+& \textit{Verified by ground testing and voltage analysis}	\\
+
+\textbf{PS-P-02}	& The power subsystem shall transmit data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+ & \textit{Verified by ground testing}				\\
+ 
+\textbf{PS-P-03}	& The power subsystem shall transmit data to data handling subsystem with accuracy of \gls{TBD} \%. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{PS-P-04}	& The power subsystem shall provide output voltages to each component to within $\pm$ \gls{TBD} \gls{V}. \textit{(Derived from PS-F-01)} \\
+ & \textit{Rationale: to ensure each component receives correct voltage} \\
+ & \textit{Verified by ground testing and power analysis}	\\
+ 
+\textbf{PS-P-05}	& The power subsystem shall execute commands within \gls{TBD} \gls{min} of receiving command. \textit{(Derived from PS-F-06)} \\
+ & \textit{Rationale: required for system responsiveness} \\
+ & \textit{Verified by ground testing}	\\
+ 
+\textbf{PS-P-06}	& The power subsystem shall transmit data at frequency of \gls{TBD} \gls{Hz}. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure the data handling subsystem correctly identifies the source of transmission} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}
