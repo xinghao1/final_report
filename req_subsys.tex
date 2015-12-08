@@ -1,0 +1,744 @@
+\subsection{Subsystem LM: Locomotion}
+\label{sect:LM_req}
+%---------------------------------------------------------------------------------------------------------
+% Mechanical - Rewrite some?
+%---------------------------------------------------------------------------------------------------------
+\subsubsection*{Functional Requirements}
+\captionsetup[table]{list=no}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.75cm}}
+\textbf{LM-F-01}	&
+The locomotion subsystem shall be able to move the robotic system.
+\textit{(Derived from S-F-02, S-F-03, S-F-04)}\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+\textbf{LM-F-02}	&
+The locomotion subsystem shall be functional in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+% Electrical ---------------------------------------------------------------------------------------------
+\textbf{LM-F-03}	& The locomotion subsystem shall accept electrical power from the power supply subsystem.
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+\textbf{LM-F-04}	& The locomotion subsystem shall receive commands from the data handling subsystem.
+\textit{(Derived from S-F-13, S-F-14)}\\ 
+& \textit{Rationale: required for control from ground control or Outpost}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{LM-F-05}	&
+The locomotion subsystem shall manipulate the velocities of joints with rates specified by received commands.
+\textit{(Derived from S-F-02, S-F-04, S-F-05, LM-F-01)}\\
+ &	\textit{Rationale: required for operation} \\
+ &	\textit{Verified by ground testing}	\\
+ 
+\textbf{LM-F-06}	&
+The locomotion subsystem shall transmit data related to position and angle of the joints to the data handling subsystem. \textit{(Derived from S-F-07)} \\
+ &	\textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ &	\textit{Verified by ground testing}
+\end{longtable}
+%Mechanical------------------------------------------------------------------------------------------------
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.75cm}}
+\textbf{LM-P-01}	&
+The locomotion subsystem shall have at least 6 \gls{DOF}.
+\textit{(Derived from S-F-02)}	\\
+& \textit{Rationale: Derived from mechanical trade study}	\\
+& \textit{(Verified by analysis of the subsystem design)}	\\
+
+\textbf{LM-P-02}	&
+The work envelope of the locomotion subsystem shall cover \gls{TBD} \% of the lunar Outpost.
+\textit{(Derived from S-P-05)} \\
+&	\textit{Rationale: Required for Operation} \\
+& \textit{(Verified by ground testing)}	\\
+
+\textbf{LM-P-03}	&
+The locomotion subsystem shall move at \gls{TBD} \gls{m/s}.
+\textit{(Derived from LM-F-05)}	\\
+& \textit{Rationale: Required for Operation} \\
+& \textit{(Verified by ground testing)}	\\
+
+\textbf{LM-P-04}	&
+The locomotion subsystem shall maintain mechanical integrity between -120\gls{degC} to 180\gls{degC} (\gls{TBC}) \cite{ERAjoint}.
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{(Verified by ground testing under temperature range)}	\\
+
+\textbf{LM-P-05}	&
+The locomotion subsystem shall have a mass less than 141.75 \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{LM-P-06}	&
+The locomotion frame subsystem in undeployed state shall have volume less than \gls{TBD}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{(Verified by measuring dimensions of the subsystem)}	\\
+
+\textbf{LM-P-07}	&
+The subsystem shall be capable of withstanding vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) during launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{LM-P-08}	&
+The locomotion subsystem shall consume a maximum of 36 \gls{W} of electrical power on average.
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{LM-P-09}	&
+The locomotion subsystem shall consume a maximum of 140 \gls{W} of electrical power on peak. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{LM-P-10}	&
+The locomotion subsystem shall send the data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. 
+\textit{(Derived from LM-F-06)}	\\
+& \textit{Rationale: to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{LM-P-11}	& The locomotion subsystem shall send data to data handling subsystem with accuracy of \gls{TBD} \%. 
+\textit{(Derived from LM-F-06)}	\\
+& \textit{Rationale: to ensure system reliability} \\
+& \textit{Verified by ground testing and data analysis}	\\
+%Controls-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\textbf{LM-P-12}	& The locomotion subsystem shall rotate the joints at a velocity up to 0.5 \gls{rad/s} \cite{ERAjoint}. (\gls{TBC}) \textit{(Derived from LM-F-05)} \\
+ &	\textit{Rationale: to ensure the system moves to target location in desired amount of time} \\
+ &	\textit{Verified by ground testing}	\\
+
+\textbf{LM-P-13}	& The locomotion subsystem shall execute commands within \gls{TBD} \gls{min} of receiving command. \textit{(Derived from LM-F-04, LM-F-05)} \\
+ &	\textit{Rationale: required for system responsiveness} \\
+ &	\textit{Verified by ground testing}	\\
+
+\textbf{LM-P-14}	& The drive amplifies shall receive commands at frequency of 20 \gls{Hz}. (\textit{\Cref{app:frequencies}}) \textit{(Derived from LM-F-04 and Appendix)} \\
+ &	\textit{Rationale: to ensure accuracy in movement of joints} \\
+ &	\textit{Verified by ground testing}	\\
+ 
+\textbf{LM-P-15}	& The resolvers shall transmit data at frequency of 300 \gls{Hz}. (\textit{\Cref{app:frequencies}}) \textit{(Derived from LM-F-06 and Appendix)} \\
+ &	\textit{Rationale: to ensure accuracy in movement of joints} \\
+ &	\textit{Verified by ground testing}
+\end{longtable}
+
+\subsection{Subsystem DH: Data Handling and Processing}
+\label{req_DH}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+% Mechanical
+\textbf{DH-F-01}	&
+The data handling subsystem shall be operational in a vacuum environment. \textit{(Derived from S-E-01)}\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+% Electrical
+
+\textbf{DH-F-02}	& The locomotion subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-03}	& The data handling subsystem shall send commands to the other subsystems (LM, TC, PS, EE, SR). 
+\textit{(Derived from S-F-13, S-F-14)}\\ 
+& \textit{Rationale: required for subsystem operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-04}	& The data handling subsystem shall receive data from the other subsystems (LM, TC, PS, EE, SR). \textit{(Derived from S-F-07)} \\
+ &	\textit{Rationale: required to process data and relay the information to the Outpost} \\
+ &	\textit{Verified by ground testing}			\\
+
+\textbf{DH-F-05}	& The data handling subsystem shall send transmissions to the Outpost. 
+\textit{(Derived from S-F-07)}\\
+& \textit{Rationale: required for communication with the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-06}	& The data handling subsystem shall receive commands from the Outpost. 
+\textit{(Derived from S-F-13, S-F-14)}\\
+& \textit{Rationale: required for manual operation from the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-07}	& The data handling subsystem shall process the data and perform necessary mathematical computations. 
+\textit{(Derived from S-F-13, S-F-14)}\\
+& \textit{Rationale: the subsystem shall calculate amount of torque needed by joints to reach the target area, number and location of active heaters to keep desired subsystems at operational temperature range, and power needed by each subsystem during operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-F-08}	& The data handling subsystem shall have storage for the received data and commands. \textit{(Derived from S-F-07, S-C-06)} \\
+ &	\textit{Rationale: to ensure operation in case of shutdown or failure} \\
+& \textit{Verified by ground testing}	\\
+\textbf{DH-F-09}	& The data handling subsystem shall have redundant methods for sending and receiving data and commands. \textit{(Derived from S-C-06)} \\
+ &	\textit{Rationale: adding a level of tolerance lowers system risk} \\
+ &	\textit{Verified by ground testing and design analysis}
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+% Mechanical
+\textbf{DH-P-01}	&
+The data handling subsystem shall maintain mechanical integrity between -20\gls{degC} to 65\gls{degC} (\gls{TBC}).
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\	
+
+\textbf{DH-P-02}	&
+The CPU processor of the data handling subsystem shall be operational between \gls{TBD}\gls{degC} to \gls{TBD}\gls{degC}.
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}\\
+
+\textbf{DH-P-03}	&
+The data handling subsystem shall weigh less than 15.75 \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{DH-P-04}	&
+The data handling subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{DH-P-05}	&
+The data handling subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) at \gls{TBD} \gls{dB} during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+% Electrical----------------------------------------
+\textbf{DH-P-06}	& The data handling subsystem shall consume a maximum of 8 \gls{W} of electrical power on average. \textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-07}	& The data handling subsystem shall consume a maximum of 13 \gls{W} of electrical power during peak. \textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-08}	& The data handling subsystem shall transmit data to Outpost at the rate of \gls{TBD} \gls{kbps}.
+\textit{(Derived from DH-F-05)} \\
+ & \textit{Rationale: to ensure the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}				\\
+
+\textbf{DH-P-09}	& The data handling subsystem shall send data to the Outpost with accuracy of \gls{TBD} \%. 
+\textit{(Derived from DH-F-05)} \\
+& \textit{Rationale: required for accurate communication with the Outpost} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{DH-P-10}	& The data handling subsystem shall have minimum processing speed of 133 \gls{MHz}. (\gls{TBC})
+\textit{(Derived from DH-F-07 and Trade Study for Processors)} \\
+ & \textit{Rationale: to ensure the subsystem receives appropriate command in time} \\
+  & \textit{Verified by ground testing}		\\
+
+\textbf{DH-P-11}	& The data handling subsystem shall check the data integrity of received commands and data.
+\textit{Derived from DH-F-07)} \\
+ & \textit{Rationale: to ensure accurate data or command is received} \\
+  & \textit{Verified by ground testing and data analysis}	\\
+
+\textbf{DH-P-12}	& The data handling subsystem shall have storage for \gls{TBD} \gls{GB} of data and commands.
+\textit{(Derived from DH-F-08)} \\
+ & \textit{Rationale: to store information for future operations} \\
+ & \textit{Verified by ground testing and data analysis}		 									\\
+\textbf{DH-P-08}	&     The data handling subsystem shall store \gls{TBD} \gls{GB} of data and commands for TBD days. \textit{(Derived from DH-F-08, S-C-06)}  \\
+ & \textit{Rationale: to maintain the data in case of shutdown or failure} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{DH-P-13}	&     The data handling subsystem shall transmit commands or data to other subsystems and the Outpost at frequencies given in \Cref{app:frequencies}.
+\textit{(Derived from DH-F-05)} \\
+ & \textit{Rationale: to ensure the data handling subsystem transmits commands or data to desired subsystem or the Outpost} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}
+
+\subsection{Subsystem TC: Thermal Control}
+\label{req_TC}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{TC-F-01}	&
+The thermal control subsystem shall provide thermal protection to all subsystems during the entire mission.
+\textit{(Derived from S-E-02)} \\
+& \textit{Rationale: Required for Operation} \\
+& \textit{(Verified by ground testing and lifetime simulation)}	\\
+
+\textbf{TC-F-02}	&
+The thermal control subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{TC-F-03}	& The thermal control subsystem shall accept electrical power from the power supply subsystem. \textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{TC-F-04}	& The thermal control subsystem shall receive commands from the data handling subsystem.
+\textit{(Derived from S-F-14, S-F-15)} \\
+ & \textit{Rationale: required for control from ground control or Outpost} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{TC-F-05}	& The thermal control subsystem shall transmit temperature data to the data handling subsystem. \textit{(Derived from S-F-07)} \\
+ & \textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+  & \textit{Verified by ground testing}			\\
+
+\textbf{TC-F-06}	& The thermal control subsystem shall measure temperature of sensitive subsystems (SR, DH, PS). \textit{(Derived from S-E-02)} \\
+ & \textit{Rationale: measuring temperature of sensors, data handling, and power subsystem and estimating the temperature of the rest reduces power usage and number of sensors required on the system} \\
+ & \textit{Verified by ground testing and thermal analysis}		\\
+
+\textbf{TC-F-07}	& The thermal control subsystem shall adjust the temperature of the subsystems specified by received commands. \textit{(Derived from S-F-14, S-F-15, S-E-02, TC-F-04)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing}
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+
+\begin{longtable}{P{2cm}P{13.25cm}}
+
+\textbf{TC-P-01}	&
+The thermal control subsystem shall maintain mechanical integrity between -70\gls{degC} to 135\gls{degC} (\gls{TBC}).
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{(Verified by ground testing under temperature range)}	\\
+
+\textbf{TC-P-02}	&
+The thermal control subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{TC-P-03}	&
+The thermal control subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{(Verified by measuring dimensions of the subsystem)}	\\
+
+\textbf{TC-P-04}	&
+The thermal control subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{TC-P-05}	& The thermal control subsystem shall maintain the temperatures of the subsystem at given ranges listed in \Cref{app:optemp}.
+\textit{(Derived from TC-F-07)} \\
+ & \textit{Rationale: to ensure the subsystem is at operational or survival temperature range} \\
+ & \textit{Verified by ground testing under given temperature range}\\
+ 
+\textbf{TC-P-06}	& The electronics of thermal control subsystem shall consume/dissipate a maximum of 140 \gls{W} of electrical power on average. 
+\textit{(Derived from S-C-03)} \\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{TC-P-07}	& The electronics of thermal control subsystem shall consume/dissipate a maximum of 140 \gls{W} of electrical power on peak.
+\textit{(Derived from S-C-04)} \\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{TC-P-08}	& The thermal control subsystem shall change the temperature of a subsystem at rate of \gls{TBD} \gls{degC/s}. \textit{(Derived from TC-F-07)} \\
+ & \textit{Rationale: to adjust the temperature of subsystem within time for operation} \\
+ & \textit{Verified by ground testing under given temperature range}\\
+
+\textbf{TC-P-09}	& The thermal control subsystem shall measure temperatures of the subsystems from -90\gls{degC} to 200\gls{degC}. (\gls{TBC}) \textit{(Derived from TC-F-06 and Operational and Temperature Ranges from \Cref{app:optemp})} \\
+ & \textit{Rationale: required for subsystem operation} \\
+ &  \textit{Verified by ground testing under given temperature range}	\\
+
+\textbf{TC-P-10}	& The thermal control subsystem shall measure temperatures of the subsystems with accuracy of 1\gls{degC} \cite{temp_sensors}. (\gls{TBC}) \textit{(Derived from TC-F-06)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+  &  \textit{Verified by ground testing and data analysis}	\\
+
+\textbf{TC-P-11}	& The thermal control subsystem shall measure temperatures of the subsystem at rate of \gls{TBD} \gls{Hz}. \textit{(Derived from TC-F-06)} \\ 
+ & \textit{Rationale: to detect temperature change in the system} \\
+ &  \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{TC-P-12}	& The thermal control subsystem shall transmit temperature data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. \textit{Derived from TC-F-05)} \\
+ & \textit{Rationale:to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+ &  \textit{Verified by ground testing}			\\
+
+\textbf{TC-P-13}	& The thermal control subsystem shall transmit temperature data to data handling subsystem with accuracy of 1\gls{degC} \cite{temp_sensors}. (\gls{TBC}) \textit{(Derived from TC-F-05)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+ & \textit{Verified by ground testing and data analysis}		\\
+ 
+\textbf{TC-P-14}	& The thermal control subsystem shall execute commands within \gls{TBD} \gls{min} of receiving command. \textit{(Derived from TC-F-07)}\\
+ & \textit{Rationale: required for system responsiveness} \\
+ &  \textit{Verified by ground testing}								\\
+ 
+\textbf{TC-P-15}	& The thermal control subsystem shall receive commands at a frequency of 35 \gls{Hz}. (\textit{\Cref{app:frequencies}}) \textit{(Derived from TC-F-05)} \\
+ & \textit{Rationale: to ensure temperature is maintained accurately} \\
+ &  \textit{Verified by ground testing}	\\
+
+\textbf{TC-P-16}	& The thermal control subsystem shall transmit data at frequency of 35 \gls{Hz}. (\textit{\Cref{app:frequencies}})
+\textit{(Derived from TC-F-05)} \\
+ & \textit{Rationale: to ensure temperature is maintained accurately} \\
+ &  \textit{Verified by ground testing}	
+\end{longtable}
+
+\subsection{Subsystem PS: Power Supply}
+\label{sect:PS_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{PS-F-01}	&
+The power subsystem shall secure all cables and distribution networks to the other subsystems.
+\textit{(Derived from S-E-01, S-E-05, S-E-08)}	\\
+& \textit{Rationale: required for operation}	\\
+&\textit{Verified by analysis of the subsystem design}	\\
+
+\textbf{PS-F-02}	&
+The power subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{PS-F-03}	& The power subsystem shall mitigate potential power surges. 
+\textit{(Derived from S-C-03, S-C-04)} \\
+& \textit{Rationale: to ensure system reliability} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{PS-F-04}	& The power subsystem shall supply uninterrupted power to all subsystems that require electric power.
+\textit{(Derived from S-C-03, S-C-04)} \\
+ & \textit{Rationale: to ensure continuous operation of the system} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-05}	& The power subsystem shall transmit power usage data to the data handling subsystem.
+\textit{(Derived from S-F-07)} \\
+ & \textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ &  \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-06}	& The power subsystem shall supply voltage to subsystems based on required voltages of each subsystem. \textit{(Derived from S-C-04, S-C-05)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{PS-F-07}	& The power subsystem shall have redundant methods for distributing power. \textit{(Derived from S-C-06)} \\
+ & \textit{Rationale: adding a level of tolerance lowers system risk} \\
+ & \textit{Verified by ground testing and design analysis}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{PS-P-01}	& The power subsystem shall convert power to specific voltages (TBD) with accuracy of 1 \gls{V}. (\gls{TBC} for sensors, refer to \Cref{app:sensorpower})\\
+& \textit{Rationale: required for subsystem operation and ensure system reliability} \\
+& \textit{Verified by ground testing and voltage analysis}	\\
+
+\textbf{PS-P-02}	& The power subsystem shall transmit data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+ & \textit{Verified by ground testing}				\\
+ 
+\textbf{PS-P-03}	& The power subsystem shall transmit data to data handling subsystem with accuracy of \gls{TBD} \%. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{PS-P-04}	& The power subsystem shall provide output voltages to each component to within $\pm$ \gls{TBD} \gls{V}. \textit{(Derived from PS-F-01)} \\
+ & \textit{Rationale: to ensure each component receives correct voltage} \\
+ & \textit{Verified by ground testing and power analysis}	\\
+ 
+\textbf{PS-P-05}	& The power subsystem shall execute commands within \gls{TBD} \gls{min} of receiving command. \textit{(Derived from PS-F-06)} \\
+ & \textit{Rationale: required for system responsiveness} \\
+ & \textit{Verified by ground testing}	\\
+ 
+\textbf{PS-P-06}	& The power subsystem shall transmit data at frequency of \gls{TBD} \gls{Hz}. \textit{(Derived from PS-F-05)} \\
+ & \textit{Rationale: to ensure the data handling subsystem correctly identifies the source of transmission} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}
+
+\subsection{Subsystem EE: End Effector}
+\label{sect:EE_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{EE-F-01}	&
+The end effector subsystem shall be able to attach to astronauts for \gls{EVA}.
+\textit{(Derived from S-F-05,S-F-09)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-02}	& The end effector subsystem shall be able to capture visiting vehicles and payloads.
+\textit{(Derived from S-F-09)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-03}	&
+The end effector subsystem shall be able to detach faulty components.
+\textit{(Derived from S-F-06)}	\\
+& \textit{Rationale: Required for Operation}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-04}	&
+The end effector subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-05}	& The end effector subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-06}	& The end effector subsystem shall receive commands from the data handling subsystem. 
+\textit{(Derived from S-F-13, S-F-14)}\\ 
+& \textit{Rationale: required for control from ground control or Outpost}\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-F-07}	& The end effector subsystem shall manipulate the position of the end effector from the received commands. 
+\textit{(Derived from EE-F-01, EE-F-02, EE-F-03, EE-F-06)}\\
+ &	\textit{Rationale: required for operation} \\
+ &	\textit{Verified by ground testing}	\\
+ 
+\textbf{EE-F-08}	& The end effector subsystem shall send data related to the end effectors to the data handling subsystem. 
+\textit{(Derived from S-F-07)} \\
+ &	\textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ &	\textit{Verified by ground testing}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{EE-P-01}	&
+The end effector subsystem shall manipulate payloads of up to 10000 \gls{kg} (\gls{TBC}).
+\textit{(Derived from S-P-01)} \\
+&	\textit{Rationale: required for operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-02}	&
+The end effector subsystem shall apply holding or reaction forces of 200 \gls{N} in any direction.
+\textit{(Derived from S-P-02)} \\
+&	\textit{Rationale: required for operation} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-03}	&
+The end effector subsystem shall accommodate for 0 \gls{m} to 0.1 \gls{m} (\gls{TBC}) of linear misalignment in axial direction \cite{NASAsysreq_Kumar}. 
+\textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+&\textit{Verified by ground testing and analysis of the subsystem}	\\
+
+\textbf{EE-P-04}	&
+The end effector subsystem shall accommodate for 0.1 \gls{m} (\gls{TBC}) of linear misalignment in radial direction \cite{NASAsysreq_Kumar}. 
+ \textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-05}	&
+The end effector subsystem shall accommodate for 10\gls{deg} (\gls{TBC}) roll of angular misalignment \cite{NASAsysreq_Kumar}.
+ \textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-06}	&
+The end effector subsystem shall accommodate for 15\gls{deg} (\gls{TBC}) pitch and yaw of angular misalignment \cite{NASAsysreq_Kumar}.
+\textit{(Derived from EE-F-07)} \\
+&	\textit{Rationale: To ensure system accuracy} \\
+& \textit{Verified by ground testing and analysis of the subsystem design}\\
+
+\textbf{EE-P-07}	&
+The end effector subsystem shall maintain mechanical integrity between -70\gls{degC} to 180\gls{degC}(\gls{TBC}).
+\textit{(Derived from S-E-02)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\
+
+\textbf{EE-P-08}	&
+The end effector subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{EE-P-09}	&
+The end effector subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{EE-P-10}	&
+The end effector subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) at \gls{TBD} \gls{dB} during the launch. 
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+
+\textbf{EE-P-11}	& The end effector subsystem shall consume a maximum of 15.4 \gls{W} of electrical power on average.
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-12}	& The end effector subsystem shall consume a maximum of 100 \gls{W} of electrical power on peak. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{EE-P-13}	& The end effector subsystem shall send the data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. 
+\textit{(Derived from EE-F-08)} \\
+ & \textit{Rationale: to ensure the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}				\\
+
+\textbf{EE-P-14}	& The end effector subsystem shall send data to data handling subsystem with accuracy of 1\gls{deg}. 
+\textit{(Derived from EE-F-08)} \\
+& \textit{Rationale: required for accurate communication with the Outpost} \\
+& \textit{Verified by ground testing}	
+\end{longtable}
+
+\subsection{Subsystem SR: Sensors}
+\label{sect:SR_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{SR-F-01}	&
+The sensors subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}	\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-02}	& The sensors subsystem shall accept electrical power from the power supply subsystem. 
+\textit{(Derived from S-C-03, S-C-04)}	\\
+& \textit{Rationale: subsystem needs power to operate}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-03}	& The sensors subsystem shall receive commands from the data handling subsystem. \textit{(Derived from S-F-14, S-F-15)} \\
+ & \textit{Rationale: required for control from ground control or the Outpost} \\
+ & \textit{Verified by ground testing}	\\
+
+\textbf{SR-F-04}	& The sensors subsystem shall send the graphic data to the data handling subsystem. \textit{(Derived from S-F-07)} \\
+ & \textit{Rationale: data handling subsystem will process the data and send necessary information to the Outpost} \\
+ & \textit{Verified by ground testing}		\\
+
+\textbf{SR-F-05}	& The sensors subsystem shall search for physical damage on the surface of the outpost. \textit{(Derived from S-F-04)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{SR-P-01}	&
+The sensor subsystem shall maintain mechanical integrity between -20\gls{degC} to 65\gls{degC} (\gls{TBC}).
+\textit{(Derived from S-E-02 and Appendix)}\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\
+
+\textbf{SR-P-02}	& The sensor subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{SR-P-03}	&
+The sensor subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{SR-P-04}	&
+The sensor subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) at \gls{TBD} \gls{dB} during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-05}	& The sensors subsystem shall consume a maximum of 52.5 \gls{W} of electrical power on average. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-06}	& The sensors subsystem shall consume a maximum of 60 \gls{W} of electrical power on peak. 
+\textit{(Derived from S-C-03 and power budget)}	\\
+& \textit{Rationale: required according to power budget} \\
+&  \textit{Verified by ground testing}	\\
+
+\textbf{SR-P-07}	& The sensors subsystem shall send the data to data handling subsystem at rate of \gls{TBD} \gls{kbps}. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure the subsystem and the Outpost receives sufficient amount of data in time} \\
+  & \textit{Verified by ground testing}		\\
+  
+\textbf{SR-P-08}	& The sensors subsystem shall send data to data handling subsystem with accuracy of \gls{TBD} \%. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure system reliability} \\
+ & \textit{Verified by ground testing and data analysis}	\\
+ 
+\textbf{SR-P-09}	& The sensors subsystem shall perform \gls{TBD} full scans per day. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: to detect changes on the surface of the Outpost} \\
+ & \textit{Verified by ground testing and data analysis}			\\
+ 
+\textbf{SR-P-10}	& The sensors subsystem shall detect physical damage with size larger than \gls{TBD} \gls{mm} on the surface of the Outpost. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	\\
+ 
+\textbf{SR-P-11}	& The sensors subsystem shall detect location of physical damage on the Outpost within \gls{TBD} \gls{cm}. \textit{(Derived from SF-F-03)} \\
+ & \textit{Rationale: required for operation} \\
+ & \textit{Verified by ground testing and simulation}	\\
+ 
+\textbf{SR-P-12}	& The sensors subsystem shall receive commands at frequencies given in \Cref{app:frequencies}. \textit{(Derived from SR-F-01)} \\
+ & \textit{Rationale: to ensure accuracy in measurement of required data} \\
+ & \textit{Verified by ground testing}	\\
+ 
+\textbf{SR-P-13}	& The sensors subsystem shall transmit data at frequencies given in \Cref{app:frequencies}. \textit{(Derived from SR-F-02)} \\
+ & \textit{Rationale: to ensure accuracy in measurement of required data} \\
+ & \textit{Verified by ground testing}	
+\end{longtable}
+
+\subsection{Subsystem FR: Frame}
+\label{sect:FR_req}
+\subsubsection*{Functional Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{FR-F-01}	&
+The frame subsystem shall provide supporting structure to the robotic system.
+\textit{(Derived from S-E-01, S-E-05, S-E-08)}	\\
+& \textit{Rationale: required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{FR-F-02}	&
+The frame subsystem shall protect the inner components from physical environmental hazards.
+\textit{(Derived from S-E-01, S-E-05, S-E-08)}	\\
+& \textit{Rationale: required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{FR-F-03}	&
+The frame subsystem shall be operational in a vacuum environment.
+\textit{(Derived from S-E-01)}\\
+& \textit{Rationale: Required for operation}	\\
+& \textit{Verified by ground testing}	\\
+
+\textbf{FR-F-04}	& The frame subsystem shall house the all subsystems and cables and distribution channels that connect to the subsystems. \\
+& \textit{(Derived from FR-F-01)}	\\
+& \textit{Rationale: to ensure all subsystems are placed in the system and connected accordingly} \\
+& \textit{Verified by design inspection}
+\end{longtable}
+\vspace{-15pt}
+\subsubsection*{Performance Requirements}
+\vspace{-15pt}
+\begin{longtable}{P{2cm}P{13.25cm}}
+\textbf{FR-P-01}	&
+The frame subsystem shall maintain mechanical integrity between -70\gls{degC} to 180\gls{degC}(\gls{TBC}).
+\textit{(Derived from S-E-02 and Appendix)}	\\
+& \textit{Rationale: To ensure system operation in the operation temperature range} \\
+& \textit{Verified by ground testing under temperature range}	\\
+
+\textbf{FR-P-02}	&
+The frame subsystem shall have mass less than \gls{TBD} \gls{kg}.
+\textit{(Derived from S-C-01 and Mass Budget)}	\\
+& \textit{Rationale: To ensure the mass satisfies the constraint requirement} \\
+& \textit{Verified by measuring weight of the subsystem}	\\
+
+\textbf{FR-P-03}	&
+The frame subsystem shall have volume less than \gls{TBD} \gls{m3}.
+\textit{(Derived from S-F-01)}	\\
+& \textit{Rationale: To ensure the system fits inside the transport vehicle} \\
+& \textit{Verified by measuring dimensions of the subsystem}	\\
+
+\textbf{FR-P-04}	& The frame subsystem shall withstand vibrations up to 270 \gls{Hz} (\gls{TBC}) (\Cref{app:loadcalc}) during the launch.
+\textit{(Derived from S-E-04 and Load Calculation in the Appendix)}	\\
+& \textit{Rationale: Vibration may damage the parts of the system} \\
+& \textit{Verified by ground testing}	\\
+
+\textbf{FR-P-05}	&
+The frame subsystem shall prevent other subsystems from displacing more than \gls{TBD} \gls{cm} due to vibration during the launch.
+\textit{(Derived from FR-P-04)}	\\
+& \textit{Rationale: To ensure system reliability} \\
+& \textit{Verified by ground testing under specific frequency}	\\
+
+\textbf{FR-P-06}	&
+The frame subsystem shall have minimum yield safety factor of 1.1 (\gls{TBC}).
+\textit{(Derived from FR-F-02, FR-F-03, and the Appendix)}	\\
+& \textit{Rationale: To ensure system reliability} \\
+& \textit{Verified by load testing}	\\
+
+\textbf{FR-P-07}	&
+The frame subsystem shall be minimum ultimate safety factor of 1.5 (\gls{TBC}).
+\textit{(Derived from FR-F-02, FR-F-03, and the Appendix)}	\\
+& \textit{(Derived from FR-F-02, FR-F-03, and the Appendix)}	\\
+& \textit{(Verified by load testing)}		
+\end{longtable}
