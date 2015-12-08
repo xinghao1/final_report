@@ -118,6 +118,32 @@ W.~Kester{,}~J. Bryant and W.~Jung.
   \url{http://www.analog.com/media/cn/training-seminars/design-handbooks/temperature_sensors_chapter7.pdf}.
 \newblock Accessed: 2015/11/22.
 
+\bibitem{carbonfibreprop}
+P.~J. Walsh.
+\newblock {\em {Carbon Fibers}}, volume~21.
+\newblock 2001.
+
+\bibitem{alumniumprop}
+ASM Aerospace Spcification~Metals Inc.
+\newblock {ASM Material Data Sheet: Aluminum 7075-T6; 7075-T651}.
+\newblock
+  \url{http://asm.matweb.com/search/SpecificMaterial.asp?bassnum=MA7075T6}.
+\newblock Accessed: 2015/10/30.
+
+\bibitem{steelprop}
+ASM Aerospace Spcification~Metals Inc.
+\newblock {ASM Material Data Sheet: AISI Type 304 Stainless Steel}.
+\newblock
+  \url{http://asm.matweb.com/search/SpecificMaterial.asp?bassnum=MQ304A}.
+\newblock Accessed: 2015/10/30.
+
+\bibitem{titaniumprop}
+Arcam~EBM System.
+\newblock {Ti6Al4V Titanium Alloy}.
+\newblock
+  \url{http://www.arcam.com/wp-content/uploads/Arcam-Ti6Al4V-Titanium-Alloy.pdf}.
+\newblock Accessed: 2015/10/30.
+
 \bibitem{CJME_EE}
 F.~Feng{,} Y. W. Liu{,}~H. Liu and H.~G. Cai.
 \newblock {Design schemes and comparison research of the end-effector of large
@@ -140,6 +166,28 @@ C.~J. M. Heemskerk{,}~M. Visser and D.~Vrancken.
   2006.
 \newblock Accessed: 2015/10/25.
 
+\bibitem{ESA_motor}
+E.~Favre{,} P. Gay-Crosier{,}~N. Wavre and M.~Verain.
+\newblock {European Electric Space Related Motors Handbook}.
+\newblock
+  \url{http://www.esmats.eu/esmatspapers/pastpapers/pdfs/1999/favre.pdf}.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{Pittman_motor}
+Mike Lefebvre.
+\newblock {Empowering Proper Selection of Motor Technology}.
+\newblock
+  \url{http://www.pittman-motors.com/portals/0/resources/empowering_proper_selection_of_motor_technology.pdf}.
+\newblock Accessed: 2015/11/22.
+
+\bibitem{ERA_motor}
+F.C. Baker{,} E. Favre{,} J.-M. Mozzon{,}~A. Crausaz and P.~Juriens.
+\newblock {European Robotic Arm (ERA) Manipulator Joint SystemMotor Unit and
+  Tribological Brake}.
+\newblock
+  \url{http://www.esmats.eu/esmatspapers/pastpapers/pdfs/1999/baker.pdf}.
+\newblock Accessed: 2015/10/25.
+
 \bibitem{arm_comp}
 P.~Laryssa{,} E. Lindsay{,} O. Layi{,} O. Marius{,} K. Nara{,}~L. Aris and
   T.~Ed.
@@ -147,6 +195,157 @@ P.~Laryssa{,} E. Lindsay{,} O. Layi{,} O. Marius{,} K. Nara{,}~L. Aris and
   JEMRMS and MSS}.
 \newblock In {\em 7th ESA Workshop on Advanced Space Technologies for Robotics
   and Automation 'ASTRA 2002'ESTEC}, 2002.
+
+\bibitem{Liion_Mars}
+B.~V. Ratnakumar{,} M. C. Smart{,} L.D.~Wh itcanack{,} R.~C.~Ewell and
+  S.~Surampudi.
+\newblock {Li-Ion Rechargeable Batteries on Mars Exploration }.
+\newblock
+  \url{http://www.researchgate.net/publication/238794735_Li-Ion_Rechargeable_Batteries_on_Mars_Exploration_Rovers},
+  2014.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{ISS_power}
+National Aeronautics and Space Administration.
+\newblock {NASA Glenn Contributions to the International Space Station (ISS)
+  Electrical Power System}.
+\newblock \url{http://www.nasa.gov/centers/glenn/about/fs06grc.html}, 2011.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{batt_primer}
+{Product Engineering Processes: Battery Primer}.
+\newblock
+  \url{http://web.mit.edu/2.009/www/resources/mediaAndArticles/batteriesPrimer.pdf}.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{NiH_se}
+B.~L. Theraja{,} A.~K. Theraja and S.~G. Tarnekar.
+\newblock {\em {A Textbook of Electrical Technology}}, volume~1.
+\newblock S. Chand \& Company Ltd.
+
+\bibitem{NASA_energy}
+V.~J. Lyons{,} G. A. Gonzalez{,} M. G. Houts{,} C. J. Iannello{,} J.~H. Scott
+  and S.~Surampudi.
+\newblock {DRAFT Space Power and Energy Storage Roadmap}.
+\newblock
+  \url{http://www.nasa.gov/pdf/501328main_TA03-SpacePowerStorage-DRAFT-Nov2010-A.pdf},
+  2010.
+\newblock Accessed: 2015/10/25.
+
+\bibitem{heater_design}
+Minco.
+\newblock {Flexible Heaters Design Guide}.
+\newblock
+  \url{http://www.minco.com/~/media/WWW/Resource%20Library/Minco_HeaterDesignGuide.pdf},
+  2007.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{flex_heater}
+National~Plastic Heater.
+\newblock {Kapton/Silicone Rubber Flexible Heaters}.
+\newblock
+  \url{http://www.nphheaters.com/products/kapton/Kapton%20Flexible%20Heaters%20&%20Silicone%20Rubber%20Flexible%20Heaters.pdf}.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{mech_fluidloop}
+MOOG Bradford.
+\newblock {Mechanically Pumped Fluid Loop}.
+\newblock
+  \url{http://www.moog.com/literature/Space_Defense/Spacecraft/Avionics_Instruments/MPFL.pdf},
+  2013.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{hightemp_fluidloop}
+A.~D. Paris{,}~P. Bhandari and G.~C. Birur.
+\newblock {High Temperature Mechanically Pumped Fluid Loop for Space
+  Applications – Working Fluid Selection }.
+\newblock \url{http://pd-tech.com/wp-content/uploads/2014/08/pdt-paris.pdf},
+  2004.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{tc_tech}
+M.~N.~De Parolis and W.~Pinter-Krainer.
+\newblock {Current and Future Techniques for Spacecraft Thermal Control 1.
+  Design drivers and current technologies}.
+\newblock \url{http://www.esa.int/esapub/bulletin/bullet87/paroli87.htm}, 1996.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{studytopology}
+Study.com.
+\newblock {How Star, Bus, Ring \& Mesh Topology Connect Computer Networks in
+  Organizations}.
+\newblock
+  \url{http://study.com/academy/lesson/how-star-topology-connects-computer-networks-in-organizations.html}.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{topology_intro}
+B.~Mitchell.
+\newblock {Introduction to Computer Network Topology}.
+\newblock
+  \url{http://compnetworking.about.com/od/networkdesign/a/topologies.htm}.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{spacewire_comm}
+S.~Parkes and J.~Rosello.
+\newblock {SpaceWire ECSS-E50-12A }.
+\newblock
+  \url{http://spacewire.esa.int/content/TechPapers/documents/SpaceWire%20Standard%20%20ISWS%202003.pdf},
+  2003.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{CCSDS_design}
+The Consultative~Committee for Space Data~Systems.
+\newblock {Wireless Network Communications Overview for Space Mission
+  Operations}.
+\newblock \url{http://public.ccsds.org/publications/archive/880x0g2.pdf}, 2015.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{spacewire_uses}
+STAR-Dundee.
+\newblock {Who Uses SpaceWire?}
+\newblock \url{https://www.star-dundee.com/knowledge-base/who-uses-spacewire},
+  2015.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{commtracksys}
+B.~A. Bendkowski.
+\newblock {Communication and Tracking Systems}.
+\newblock
+  \url{http://pages.erau.edu/~ericksol/projects/issa/commtrac.html#UHF%20System}.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{ISS_robotcompare}
+P.~Laryssa{,} E. Lindsay{,} O. Layi{,} O. Marius{,} K. Nara{,}~L. Aris and
+  T.~Ed.
+\newblock {International Space Station Robotics: A Comparative Study of ERA,
+  JEMRMS and MSS}.
+\newblock
+  \url{http://robotics.estec.esa.int/ASTRA/Astra2002/Papers/astra2002_1.3-1.pdf},
+  2002.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{AER407_Mech}
+J.~Bansal{,} H. Xing{,} Y. J. Kim{,} G.~C. Liu and L.~Liu.
+\newblock {Mechanical Design for Canada's Next Generation Robotics}, 2015.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{AER407_ElectricalPresentation}
+R.~Gillet.
+\newblock {AER407 Electrical Presentation}, 2015.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{AER407_electricalnotes}
+R.~GIllett.
+\newblock {AER 407F Space Systems Design Notes on Electrical System Design}.
+\newblock
+  \url{https://portal.utoronto.ca/bbcswebdav/pid-4852972-dt-content-rid-28876333_2/courses/Fall-2015-AER407H1-F-PRA0101/Electrical_Systems_Notes_Gillett2015.pdf},
+  2015.
+\newblock Accessed: 2015/11/08.
+
+\bibitem{spacecraftdesign}
+C.~D. Brown.
+\newblock {\em {Elements of Spacecraft Design}}.
+\newblock American Institute of Aeronautics and Astronautics, Inc, 2002.
 
 \bibitem{ISS_Harmony}
 National Aeronautics and Space Administration.
